@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto Web - Bootstrap 5.2.3</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Opción para tus propios estilos personalizados (descoméntala si creas un style.css) -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+        <!-- NavBar -->
+
+ <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top">
+    <div class="container">
+        
+        <!-- 1. Logotipo / Imagen + Nombre a la izquierda -->
+        <a class="navbar-brand d-flex align-items-center text-dark" href="#">
+            <img src="images/LogoCatalogoChileno.svg" alt="Logotipo" height="24" class="d-inline-block me-2">
+        </a>
+
+        <!-- 2. Botón Hamburguesa (para móviles) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 3. Contenido colapsable (Enlaces + Botón) -->
+        <div class="collapse navbar-collapse" id="navbarContenido">
+            
+            <!-- Menú de Navegación -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+
+            <!-- Botones de Acción / Iniciar Sesión -->
+            <div class="d-flex gap-2">
+                <a href="#" class="btn btn-outline-primary">Iniciar sesión</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+ <!-- 1. Carrusel  -->
+
+<main class="container">
+  <div id="carouselExampleCaptions" class="carousel slide rounded-2 overflow-hidden" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/cl-01.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/cl-02.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/cl-03.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
+
+
+    <!-- 1. BARRA DE BÚSQUEDA Y FILTROS -->
+<main class="container my-4">
+   <div class="card shadow-sm p-3 mb-4 bg-light border-0">
+    <form class="row g-2 align-items-center">
+        
+        <!-- 1. Campo de Búsqueda de Texto -->
+        <div class="col-12 col-lg-4">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">
+                    <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                </span>
+                <input type="text" class="form-control border-start-0" placeholder="Buscar por título, palabra clave...">
+            </div>
+        </div>
+
+        <!-- 2. Filtro: Tipo de Obra -->
+        <div class="col-12 col-sm-6 col-lg-2">
+            <select class="form-select" aria-label="Tipo de obra">
+                <option value="" selected>Tipo de obra</option>
+                <option value="fotografia">Fotografía</option>
+                <option value="video">Video</option>
+                <option value="audio">Audio</option>
+                <option value="vector">Vector</option>
+                <option value="3d">3D</option>
+            </select>
+        </div>
+
+        <!-- 3. Filtro: Región de Chile -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <select class="form-select" aria-label="Región de Chile">
+                <option value="" selected>Todas las regiones</option>
+                <option value="arica">Arica y Parinacota</option>
+                <option value="tarapaca">Tarapacá</option>
+                <option value="antofagasta">Antofagasta</option>
+                <option value="atacama">Atacama</option>
+                <option value="coquimbo">Coquimbo</option>
+                <option value="valparaiso">Valparaíso</option>
+                <option value="metropolitana">Región Metropolitana</option>
+                <option value="ohiggins">O'Higgins</option>
+                <option value="maule">Maule</option>
+                <option value="nuble">Ñuble</option>
+                <option value="biobio">Biobío</option>
+                <option value="araucania">La Araucanía</option>
+                <option value="los_rios">Los Ríos</option>
+                <option value="los_lagos">Los Lagos</option>
+                <option value="aysen">Aysén</option>
+                <option value="magallanes">Magallanes y Antártica</option>
+            </select>
+        </div>
+
+        <!-- 4. Filtro: Ordenar por -->
+        <div class="col-12 col-sm-6 col-lg-2">
+            <select class="form-select" aria-label="Ordenar resultados">
+                <option value="reciente" selected>Más reciente</option>
+                <option value="antiguo">Más antiguo</option>
+            </select>
+        </div>
+
+        <!-- 5. Botón Filtrar -->
+        <div class="col-12 col-sm-6 col-lg-1">
+            <button type="submit" class="btn btn-primary w-100" title="Aplicar Filtros">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+        </div>
+
+    </form>
+</div>
+</main>
+
+
+<!-- tarjetas -->
+
+<div class="container my-5">
+    <!-- row-cols-1: 1 columna en celulares -->
+    <!-- row-cols-sm-2: 2 columnas en tablets -->
+    <!-- row-cols-lg-4: 4 columnas en monitores/laptops -->
+    <!-- g-4: espacio (gap) entre las tarjetas -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+       <!-- Tarjeta 1 -->
+<div class="col">
+    <div class="card h-100 shadow-sm position-relative">
+        
+        <!-- Botón Corazón (Lista de deseos) -->
+        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <!-- Imagen de la tarjeta -->
+        <img src="images/01.jpg" class="card-img-top" alt="Imagen del producto">
+        
+        <div class="card-body d-flex flex-column">
+              
+            <!-- Artista, Ubicación y Fecha -->
+            <div class="text-muted small mb-3 d-flex flex-column gap-1">
+                <!-- Artista -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-user text-secondary"></i>
+                    <span>Juan Pablo Urrutia</span>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-secondary"></i>
+                    <span>Parral, Maule</span>
+                </div>
+
+                <!-- Fecha -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-secondary"></i>
+                    <span>14 Sep, 2026</span>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="mt-auto">
+                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
+                <a href="#" class="btn btn-primary w-100">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!-- Tarjeta 2 -->
+<div class="col">
+    <div class="card h-100 shadow-sm position-relative">
+        
+        <!-- Botón Corazón (Lista de deseos) -->
+        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <!-- Imagen de la tarjeta -->
+        <img src="images/02.jpg" class="card-img-top" alt="Imagen del producto">
+        
+        <div class="card-body d-flex flex-column">
+              
+            <!-- Artista, Ubicación y Fecha -->
+            <div class="text-muted small mb-3 d-flex flex-column gap-1">
+                <!-- Artista -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-user text-secondary"></i>
+                    <span>Juan Pablo Urrutia</span>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-secondary"></i>
+                    <span>Parral, Maule</span>
+                </div>
+
+                <!-- Fecha -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-secondary"></i>
+                    <span>14 Sep, 2026</span>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="mt-auto">
+                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
+                <a href="#" class="btn btn-primary w-100">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="col">
+    <div class="card h-100 shadow-sm position-relative">
+        
+        <!-- Botón Corazón (Lista de deseos) -->
+        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <!-- Imagen de la tarjeta -->
+        <img src="images/03.jpg" class="card-img-top" alt="Imagen del producto">
+        
+        <div class="card-body d-flex flex-column">
+              
+            <!-- Artista, Ubicación y Fecha -->
+            <div class="text-muted small mb-3 d-flex flex-column gap-1">
+                <!-- Artista -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-user text-secondary"></i>
+                    <span>Juan Pablo Urrutia</span>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-secondary"></i>
+                    <span>Parral, Maule</span>
+                </div>
+
+                <!-- Fecha -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-secondary"></i>
+                    <span>14 Sep, 2026</span>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="mt-auto">
+                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
+                <a href="#" class="btn btn-primary w-100">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 4 -->
+<div class="col">
+    <div class="card h-100 shadow-sm position-relative">
+        
+        <!-- Botón Corazón (Lista de deseos) -->
+        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
+            <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <!-- Imagen de la tarjeta -->
+        <img src="images/04.jpg" class="card-img-top" alt="Imagen del producto">
+        
+        <div class="card-body d-flex flex-column">
+              
+            <!-- Artista, Ubicación y Fecha -->
+            <div class="text-muted small mb-3 d-flex flex-column gap-1">
+                <!-- Artista -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-user text-secondary"></i>
+                    <span>Juan Pablo Urrutia</span>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-secondary"></i>
+                    <span>Parral, Maule</span>
+                </div>
+
+                <!-- Fecha -->
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-secondary"></i>
+                    <span>14 Sep, 2026</span>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="mt-auto">
+                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
+                <a href="#" class="btn btn-primary w-100">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+    <!-- Pie de página (Footer) -->
+    <footer class="bg-light text-center text-muted py-3 border-top mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Mi Proyecto Web. Desarrollado en clase Fullstack.</p>
+        </div>
+    </footer>
+
+    <!-- 2. Scripts locales de Bootstrap (JS) -->
+    <!-- Nota: Usamos 'bootstrap.bundle.min.js' porque incluye Popper.js (necesario para desplegables y modales) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
