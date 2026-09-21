@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container my-4 my-lg-5">
+    
+    <!-- Header: Artista y Botones de Acción -->
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <!-- Datos del Artista -->
+        <div class="d-flex align-items-center gap-3">
+            <img src="images/perfil.png" class="rounded-circle shadow-sm" style="width: 46px; height: 46px; object-fit: cover;" alt="Foto del Artista">
+            <div>
+                <h5 class="fw-bold mb-0 text-dark">Juan Pablo Urrutia</h5>
+                <small class="text-muted">
+                    <i class="fa-solid fa-location-dot me-1 text-danger"></i>Parral, Maule
+                </small>
+            </div>
+        </div>
+
+        <!-- Botones secundarios -->
+        <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Favoritos">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Compartir">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal (Imagen + Ficha de Compra) -->
+    <div class="row g-4 align-items-start">
+        
+        <!-- Columna Izquierda: Foto Completa con Clic para Zoom -->
+        <div class="col-lg-7 text-center">
+            <div class="position-relative bg-light rounded-3 p-2 border shadow-sm">
+                <!-- Imagen completa -->
+                <img src="images/01.jpg" 
+                     class="img-fluid rounded img-zoomable" 
+                     alt="Título de la obra"
+                     data-bs-toggle="modal" 
+                     data-bs-target="#imageZoomModal"
+                     style="max-height: 75vh; object-fit: contain;"
+                     title="Haz clic para ampliar la imagen">
+                
+                <!-- Botón flotante para sugerir Zoom -->
+                <div class="position-absolute bottom-0 end-0 m-3">
+                    <button class="btn btn-dark bg-opacity-75 btn-sm text-white rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#imageZoomModal">
+                        <i class="fa-solid fa-magnifying-glass-plus me-1"></i> Ampliar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Datos de la obra, Precio y Botón Comprar -->
+        <div class="col-lg-5">
+            <div class="card border-0 bg-light p-4 rounded-3 shadow-sm">
+                
+                <!-- Categoria / Badge -->
+                <span class="badge bg-primary bg-opacity-10 text-primary w-auto align-self-start mb-2 px-3 py-2 rounded-pill fw-normal">
+                    Naturaleza
+                </span>
+
+                <!-- Título de la Foto -->
+                <h2 class="fw-bold text-dark mb-3">Atardecer en la Culebra</h2>
+                
+                <p class="text-muted small mb-4">
+                    Fotografía de alta resolución capturada en sector precordillerano. Ideal para proyectos de diseño, impresiones o uso editorial.
+                </p>
+
+                <!-- Caja de Precio y Acción de Compra -->
+                <div class="p-3 bg-white rounded-3 border mb-4 shadow-sm">
+                    <small class="text-muted d-block mb-1">Precio de Licencia</small>
+                    <div class="d-flex align-items-baseline gap-2 mb-3">
+                        <span class="fs-2 fw-bold text-dark">$19.990</span>
+                        <del class="text-muted small">$25.990</del>
+                    </div>
+
+                    <a href="#" class="btn btn-primary w-100 btn-lg fw-semibold shadow-sm mb-2">
+                        Comprar
+                    </a>
+                    
+                    <div class="text-center">
+                        <small class="text-muted">
+                            <i class="fa-solid fa-shield-halved me-1 text-success"></i> Descarga inmediata en alta calidad
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Metadatos de la Imagen -->
+                <h6 class="fw-bold text-dark mb-3">Detalles de la imagen</h6>
+                <ul class="list-unstyled text-muted small d-flex flex-column gap-2 mb-0">
+                    <li class="d-flex justify-content-between border-bottom pb-2">
+                        <span><i class="fa-solid fa-calendar-days me-2 text-secondary"></i>Fecha:</span>
+                        <strong class="text-dark">14 Sep, 2026</strong>
+                    </li>
+                    <li class="d-flex justify-content-between border-bottom pb-2">
+                        <span><i class="fa-solid fa-expand me-2 text-secondary"></i>Resolución:</span>
+                        <strong class="text-dark">6000 x 4000 px (300 DPI)</strong>
+                    </li>
+                    <li class="d-flex justify-content-between border-bottom pb-2">
+                        <span><i class="fa-solid fa-file-image me-2 text-secondary"></i>Formato:</span>
+                        <strong class="text-dark">JPG</strong>
+                    </li>
+                    <li class="d-flex justify-content-between border-bottom pb-2">
+                        <span><i class="fa-solid fa-thumbs-up me-2 text-secondary"></i>Me gusta:</span>
+                        <strong class="text-dark">126</strong>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        <span><i class="fa-solid fa-eye me-2 text-secondary"></i>Vistas:</span>
+                        <strong class="text-dark">786</strong>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==========================================
+     MODAL DE ZOOM (Aparece al hacer clic)
+     ========================================== -->
+<div class="modal fade" id="imageZoomModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close btn-close-white ms-auto shadow-none" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <img src="images/01.jpg" class="img-fluid rounded shadow-lg" style="max-height: 90vh; object-fit: contain;" alt="Vista ampliada de la obra">
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- Pie de página (Footer) -->
+    <footer class="bg-light text-center text-muted py-3 border-top mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Mi Proyecto Web. Desarrollado en clase Fullstack.</p>
+        </div>
+    </footer>
+
+    <!-- 2. Scripts locales de Bootstrap (JS) -->
+    <!-- Nota: Usamos 'bootstrap.bundle.min.js' porque incluye Popper.js (necesario para desplegables y modales) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
