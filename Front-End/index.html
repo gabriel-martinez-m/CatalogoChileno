@@ -8,17 +8,18 @@
     <!-- 1. Estilos locales de Bootstrap (CSS) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Opción para tus propios estilos personalizados (descoméntala si creas un style.css) -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
+
 <body>
         <!-- NavBar -->
 
  <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top">
-    <div class="container">
+    <div class="container-fluid px-4">
         
         <!-- 1. Logotipo / Imagen + Nombre a la izquierda -->
         <a class="navbar-brand d-flex align-items-center text-dark" href="#">
@@ -60,8 +61,8 @@
 
  <!-- 1. Carrusel  -->
 
-<main class="container">
-  <div id="carouselExampleCaptions" class="carousel slide rounded-2 overflow-hidden" data-bs-ride="false">
+<main class="container-fluid px-0">
+  <div id="carouselExampleCaptions" class="carousel slide overflow-hidden" data-bs-ride="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -103,8 +104,8 @@
 
 
     <!-- 1. BARRA DE BÚSQUEDA Y FILTROS -->
-<main class="container my-4">
-   <div class="card shadow-sm p-3 mb-4 bg-light border-0">
+<main class="containe-fluid px-4 py-4">
+   <div class="card shadow-sm px-4 p-3 mb-1 bg-light border-0">
     <form class="row g-2 align-items-center">
         
         <!-- 1. Campo de Búsqueda de Texto -->
@@ -171,189 +172,1006 @@
 </div>
 </main>
 
+<!-- categorias -->
+
+<div class="container-fluid px-4">
+    <div class="d-flex flex-nowrap overflow-auto gap-2 p-2 align-items-center">
+
+        <!-- Botón 3 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
+            Novedades
+        </a>
+
+        <!-- Botón 1 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/01.jpg');">
+            <i class="fa-solid fa-star me-2"></i>Para ti
+        </a>
+
+        <!-- Botón 2 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
+            <i class="fa-solid fa-heart me-2"></i>Siguiendo
+        </a>
+        <!-- Botón 2 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
+            <i class="fa-solid fa-gavel me-2"></i>Subastas
+        </a>
+
+        
+
+        <!-- Botón 3 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
+            <i class="fa-solid fa-camera me-2"></i>Fotografía
+        </a>
+
+        <!-- Botón 4 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/04.jpg');">
+            <i class="fa-solid fa-video me-2"></i>Video
+        </a>
+
+        <!-- Botón 5 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/05.jpg');">
+            <i class="fa-solid fa-plane me-2"></i>Tomas Aéreas
+        </a>
+
+        <!-- Botón 6 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+            Ilustración
+        </a>
+
+        <!-- Botón 7 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+            Íconos
+        </a>
+
+        <!-- Botón 8 -->
+        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
+           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+            Modelos 3D
+        </a>
+
+    </div>
+</div>
 
 <!-- tarjetas -->
 
-<div class="container my-5">
+<div class="container-fluid px-4 py-4">
     <!-- row-cols-1: 1 columna en celulares -->
     <!-- row-cols-sm-2: 2 columnas en tablets -->
     <!-- row-cols-lg-4: 4 columnas en monitores/laptops -->
     <!-- g-4: espacio (gap) entre las tarjetas -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
 
-       <!-- Tarjeta 1 -->
+<!-- Tarjeta 1 -->
 <div class="col">
-    <div class="card h-100 shadow-sm position-relative">
+    <div class="card border-0 bg-transparent h-100 card-hover">
         
-        <!-- Botón Corazón (Lista de deseos) -->
-        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
-            <i class="fa-solid fa-heart"></i>
-        </button>
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/01.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
 
-        <!-- Imagen de la tarjeta -->
-        <img src="images/01.jpg" class="card-img-top" alt="Imagen del producto">
-        
-        <div class="card-body d-flex flex-column">
-              
-            <!-- Artista, Ubicación y Fecha -->
-            <div class="text-muted small mb-3 d-flex flex-column gap-1">
-                <!-- Artista -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-user text-secondary"></i>
-                    <span>Juan Pablo Urrutia</span>
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </div>
 
-                <!-- Ubicación -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-secondary"></i>
-                    <span>Parral, Maule</span>
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$7.990</span>
+                        <span class="text-decoration-line-through text-white-50">$8.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
                 </div>
 
-                <!-- Fecha -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-secondary"></i>
-                    <span>14 Sep, 2026</span>
-                </div>
-            </div>
-
-            <!-- Precio -->
-            <div class="mt-auto">
-                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
-                <a href="#" class="btn btn-primary w-100">Comprar</a>
             </div>
         </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Caballos
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Juan Pablo Urrutia
+            </p>
+
+        </div>
+
     </div>
 </div>
-
        <!-- Tarjeta 2 -->
 <div class="col">
-    <div class="card h-100 shadow-sm position-relative">
+    <div class="card border-0 bg-transparent h-100 card-hover">
         
-        <!-- Botón Corazón (Lista de deseos) -->
-        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
-            <i class="fa-solid fa-heart"></i>
-        </button>
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/02.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                        </span>
+                    </div>
 
-        <!-- Imagen de la tarjeta -->
-        <img src="images/02.jpg" class="card-img-top" alt="Imagen del producto">
-        
-        <div class="card-body d-flex flex-column">
-              
-            <!-- Artista, Ubicación y Fecha -->
-            <div class="text-muted small mb-3 d-flex flex-column gap-1">
-                <!-- Artista -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-user text-secondary"></i>
-                    <span>Juan Pablo Urrutia</span>
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </div>
 
-                <!-- Ubicación -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-secondary"></i>
-                    <span>Parral, Maule</span>
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
                 </div>
 
-                <!-- Fecha -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-secondary"></i>
-                    <span>14 Sep, 2026</span>
-                </div>
-            </div>
-
-            <!-- Precio -->
-            <div class="mt-auto">
-                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
-                <a href="#" class="btn btn-primary w-100">Comprar</a>
             </div>
         </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Mural urbano
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniela Mardones
+            </p>
+
+        </div>
+
     </div>
 </div>
 
 <!-- Tarjeta 3 -->
 <div class="col">
-    <div class="card h-100 shadow-sm position-relative">
+    <div class="card border-0 bg-transparent h-100 card-hover">
         
-        <!-- Botón Corazón (Lista de deseos) -->
-        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
-            <i class="fa-solid fa-heart"></i>
-        </button>
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/03.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                        </span>
+                    </div>
 
-        <!-- Imagen de la tarjeta -->
-        <img src="images/03.jpg" class="card-img-top" alt="Imagen del producto">
-        
-        <div class="card-body d-flex flex-column">
-              
-            <!-- Artista, Ubicación y Fecha -->
-            <div class="text-muted small mb-3 d-flex flex-column gap-1">
-                <!-- Artista -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-user text-secondary"></i>
-                    <span>Juan Pablo Urrutia</span>
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </div>
 
-                <!-- Ubicación -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-secondary"></i>
-                    <span>Parral, Maule</span>
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$5.990</span>
+                        <span class="text-decoration-line-through text-white-50">$6.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
                 </div>
 
-                <!-- Fecha -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-secondary"></i>
-                    <span>14 Sep, 2026</span>
-                </div>
-            </div>
-
-            <!-- Precio -->
-            <div class="mt-auto">
-                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
-                <a href="#" class="btn btn-primary w-100">Comprar</a>
             </div>
         </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Santiago
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniel Lopez C.
+            </p>
+
+        </div>
+
     </div>
 </div>
 
 <!-- Tarjeta 4 -->
 <div class="col">
-    <div class="card h-100 shadow-sm position-relative">
+    <div class="card border-0 bg-transparent h-100 card-hover">
         
-        <!-- Botón Corazón (Lista de deseos) -->
-        <button type="button" class="btn btn-light btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow-sm text-danger d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" aria-label="Añadir a favoritos">
-            <i class="fa-solid fa-heart"></i>
-        </button>
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/04.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
 
-        <!-- Imagen de la tarjeta -->
-        <img src="images/04.jpg" class="card-img-top" alt="Imagen del producto">
-        
-        <div class="card-body d-flex flex-column">
-              
-            <!-- Artista, Ubicación y Fecha -->
-            <div class="text-muted small mb-3 d-flex flex-column gap-1">
-                <!-- Artista -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-user text-secondary"></i>
-                    <span>Juan Pablo Urrutia</span>
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </div>
 
-                <!-- Ubicación -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-secondary"></i>
-                    <span>Parral, Maule</span>
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
                 </div>
 
-                <!-- Fecha -->
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-secondary"></i>
-                    <span>14 Sep, 2026</span>
-                </div>
-            </div>
-
-            <!-- Precio -->
-            <div class="mt-auto">
-                <p class="fs-5 fw-bold text-success mb-2">$19.990</p>
-                <a href="#" class="btn btn-primary w-100">Comprar</a>
             </div>
         </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Torres del Paine
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Romina Salazar
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- simulacion fila 2 -->
+
+<!-- Tarjeta 1 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/01.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$7.990</span>
+                        <span class="text-decoration-line-through text-white-50">$8.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Caballos
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Juan Pablo Urrutia
+            </p>
+
+        </div>
+
+    </div>
+</div>
+       <!-- Tarjeta 2 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/02.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Mural urbano
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniela Mardones
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/03.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$5.990</span>
+                        <span class="text-decoration-line-through text-white-50">$6.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Santiago
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniel Lopez C.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Tarjeta 4 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/04.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Torres del Paine
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Romina Salazar
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Simulación de fila 3 -->
+
+<!-- Tarjeta 1 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/01.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$7.990</span>
+                        <span class="text-decoration-line-through text-white-50">$8.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Caballos
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Juan Pablo Urrutia
+            </p>
+
+        </div>
+
+    </div>
+</div>
+       <!-- Tarjeta 2 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/02.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Mural urbano
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniela Mardones
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/03.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$5.990</span>
+                        <span class="text-decoration-line-through text-white-50">$6.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Santiago
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Daniel Lopez C.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Tarjeta 4 -->
+<div class="col">
+    <div class="card border-0 bg-transparent h-100 card-hover">
+        
+        <!-- Imagen con Hover Overlay -->
+        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+            
+            <!-- Imagen Limpia -->
+            <img src="images/04.jpg" alt="Imagen de la obra">
+            
+            <!-- Capa Flotante (Overlay en Hover) -->
+            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+                
+                <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                <div class="d-flex justify-content-between align-items-start">
+                    
+                    <!-- Ubicación y Fecha apiladas -->
+                    <div class="d-flex flex-column gap-1 align-items-start">
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                        </span>
+                        <span class="badge bg-dark bg-opacity-75 fw-normal">
+                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                        </span>
+                    </div>
+
+                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-semibold text-white fs-6">$9.990</span>
+                        <span class="text-decoration-line-through text-white-50">$10.990</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                        Comprar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Información fija debajo de la imagen -->
+        <div class="pt-2 px-1">
+            
+            <!-- Fila 1: Título | Likes y Vistas -->
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                    Torres del Paine
+                </h6>
+
+                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                    <span class="d-flex align-items-center gap-1" title="Me gusta">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>126</span>
+                    </span>
+                    <span class="d-flex align-items-center gap-1" title="Vistas">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>786</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Nombre del Autor -->
+            <p class="text-muted small mb-0 text-truncate">
+                Romina Salazar
+            </p>
+
+        </div>
+
     </div>
 </div>
 

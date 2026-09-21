@@ -1,0 +1,51 @@
+/* Activa la opacidad solo al pasar el cursor sobre la tarjeta */
+.hover-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-hover:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* Botón de me gusta transparente (por defecto solo borde blanco) */
+.btn-like {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 0;
+    line-height: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Al pasar el cursor O cuando tenga la clase .active (al dar click) */
+.btn-like:hover,
+.btn-like.active {
+    color: #dc3545 !important; /* Rojo Bootstrap */
+    transform: scale(1.15); /* Aumento sutil */
+}
+
+/* Transforma el icono de contorno (regular) a relleno sólido (solid) */
+.btn-like:hover .fa-heart,
+.btn-like.active .fa-heart {
+    font-weight: 900; /* Hace que el corazón se rellene por completo */
+}
+
+/* Ajustes cards categorías */
+/* Botones de categoría estilo Behance */
+.category-btn {
+    border: none;
+    white-space: nowrap; /* Adapta el ancho exacto al texto */
+    color: #ffffff !important; /* Fuerza el texto a blanco puro */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Efecto hover suave */
+.category-btn:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    filter: brightness(1.15); /* Aclara ligeramente la imagen al pasar el mouse */
+}
