@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Administrativo - CatálogoChileno</title>
+
+    <!-- Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-dark">
+
+    <!-- Contenedor principal centrado vertical y horizontalmente -->
+    <main class="d-flex align-items-center justify-content-center min-vh-100 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+                    
+                    <!-- Tarjeta del Formulario de Admin -->
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                        
+                        <!-- Encabezado oscuro para diferenciarlo del login normal -->
+                        <div class="card-header bg-primary text-white text-center py-4 border-0">
+                            <i class="fa-solid fa-shield-halved fa-3x mb-3"></i>
+                            <h4 class="fw-bold mb-0">Portal de Administración</h4>
+                            <p class="small mb-0 text-white-50">Acceso exclusivo autorizado</p>
+                        </div>
+
+                        <div class="card-body p-4 p-sm-5 bg-white">
+                            
+                            <!-- Formulario de Login -->
+                            <form action="admin.html" method="GET" novalidate>
+                                
+                                <!-- Campo Correo Electrónico / Usuario -->
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="adminEmail" placeholder="admin@catalogochileno.cl" required>
+                                    <label for="adminEmail">
+                                        <i class="fa-regular fa-envelope me-1 text-secondary"></i> Correo de administrador
+                                    </label>
+                                </div>
+
+                                <!-- Campo Contraseña -->
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control" id="adminPassword" placeholder="Contraseña" required>
+                                    <label for="adminPassword">
+                                        <i class="fa-solid fa-lock me-1 text-secondary"></i> Contraseña
+                                    </label>
+                                </div>
+
+                                <!-- Botón Iniciar Sesión -->
+                                <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold shadow-sm fs-6 mb-3">
+                                    Ingresar al Sistema
+                                </button>
+
+                            </form>
+
+                            <!-- Pie de tarjeta: Volver al sitio público -->
+                            <div class="text-center pt-3 border-top mt-4">
+                                <a href="index.html" class="text-muted small text-decoration-none hover-primary">
+                                    <i class="fa-solid fa-arrow-left me-1"></i> Volver al catálogo público
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts locales de Bootstrap (JS) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

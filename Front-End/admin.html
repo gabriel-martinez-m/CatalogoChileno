@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - CatálogoChileno</title>
+    <!-- Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-light">
+
+<!-- NavBar Admin -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+            <i class="fa-solid fa-shapes text-primary me-2"></i>Admin | CatálogoChileno
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarAdmin">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#kpis">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#moderacion">Moderación de Obras</a></li>
+                <li class="nav-item"><a class="nav-link" href="#artistas">Verificación Artistas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#configuracion">Ajustes</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+    <a href="admin_login.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+</div>
+        </div>
+    </div>
+</nav>
+
+<main class="container-fluid px-4 py-4">
+    
+    <!-- Sección 1: Dashboard y KPIs (HU-87) -->
+    <section id="kpis" class="mb-5">
+        <h4 class="fw-bold mb-3"><i class="fa-solid fa-chart-line me-2"></i>Visión Ejecutiva</h4>
+        <div class="row g-3">
+            <div class="col-12 col-md-3">
+                <div class="card border-0 shadow-sm bg-white h-100 p-3">
+                    <span class="text-muted small">Ventas Totales</span>
+                    <h2 class="fw-bold text-dark mb-0">$2.450.000</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card border-0 shadow-sm bg-white h-100 p-3">
+                    <span class="text-muted small">Comisiones Retenidas (FEE)</span>
+                    <h2 class="fw-bold text-success mb-0">$367.500</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card border-0 shadow-sm bg-white h-100 p-3">
+                    <span class="text-muted small">Nuevos Artistas (Mes)</span>
+                    <h2 class="fw-bold text-primary mb-0">24</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card border-0 shadow-sm bg-white h-100 p-3">
+                    <span class="text-muted small">Obras en Espera</span>
+                    <h2 class="fw-bold text-danger mb-0">12</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Moderación de Obras y Publicidad (HU-96 y HU-30) -->
+    <section id="moderacion" class="mb-5">
+        <h4 class="fw-bold mb-3"><i class="fa-solid fa-images me-2"></i>Moderación de Obras</h4>
+        <div class="card border-0 shadow-sm">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Vista Previa</th>
+                            <th>Título y Autor</th>
+                            <th>Región</th>
+                            <th>Estado</th>
+                            <th>Acciones de Moderación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/01.jpg" alt="Obra" class="rounded" style="width: 60px; height: 60px; object-fit: cover;"></td>
+                            <td>
+                                <strong class="d-block">Caballos</strong>
+                                <small class="text-muted">Juan Pablo Urrutia</small>
+                            </td>
+                            <td>Maule</td>
+                            <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-success me-1" title="Aprobar"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-sm btn-danger me-1" title="Rechazar"><i class="fa-solid fa-xmark"></i></button>
+                                <!-- HU-30: Promoción -->
+                                <button class="btn btn-sm btn-outline-primary" title="Destacar en Portada"><i class="fa-solid fa-star"></i> Destacar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Verificación de Identidad (HU-69) -->
+    <section id="artistas" class="mb-5">
+        <h4 class="fw-bold mb-3"><i class="fa-solid fa-id-card me-2"></i>Verificación de Artistas</h4>
+        <div class="card border-0 shadow-sm p-4">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>RUT</th>
+                        <th>Documento Adjunto</th>
+                        <th>Resolución</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Daniela Mardones</td>
+                        <td>18.123.456-7</td>
+                        <td><a href="#" class="text-primary"><i class="fa-solid fa-file-pdf me-1"></i>Carnet_Ambos_Lados.pdf</a></td>
+                        <td>
+                            <button class="btn btn-sm btn-success">Validar Perfil</button>
+                            <button class="btn btn-sm btn-outline-danger">Solicitar Reenvío</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Sección 4: Configuración Dinámica (HU-97 y HU-98) -->
+    <section id="configuracion" class="mb-5">
+        <h4 class="fw-bold mb-3"><i class="fa-solid fa-gear me-2"></i>Ajustes de Plataforma</h4>
+        <div class="row g-4">
+            <!-- FEE -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h6 class="fw-bold">Porcentaje de Comisión (FEE)</h6>
+                    <p class="small text-muted">Ajusta el margen de retención global para nuevas ventas.</p>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" value="15" min="1" max="50">
+                        <span class="input-group-text">%</span>
+                    </div>
+                    <button class="btn btn-primary w-100">Actualizar FEE</button>
+                </div>
+            </div>
+            <!-- Banners -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h6 class="fw-bold">Alertas Informativas (Banners)</h6>
+                    <p class="small text-muted">Despliega un mensaje en la parte superior del catálogo.</p>
+                    <textarea class="form-control mb-3" rows="2" placeholder="Escribe la alerta... (Ej: Mantenimiento programado)"></textarea>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-warning flex-fill text-dark fw-bold">Publicar Alerta</button>
+                        <button class="btn btn-outline-secondary">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
