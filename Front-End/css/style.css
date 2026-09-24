@@ -35,46 +35,67 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ==========================================================================
-   CONFIGURACIÓN DEL COLOR PRINCIPAL
+   CONFIGURACIÓN Y SOBRESCRITURA DE COLOR AZUL (PRIMARY)
    ========================================================================== */
-:root {
-    /* 1. Define tu nuevo color en formato HEX (Ejemplo: Terracota / Rojo) */
-    --bs-primary: #0C3067 !important;
-    
-    /* 2. Mismo color pero en formato RGB (necesario para las transparencias de Bootstrap) */
-    --bs-primary-rgb: 12, 48, 103 !important;
 
-    /* 3. Color de los enlaces del sitio */
-    --bs-link-color: #0C3067
-     !important;
-    --bs-link-hover-color: #0C3067 !important;
+:root {
+    /* Color azul principal */
+    --bs-primary: #0000FE !important;
+    
+    /* Valor RGB requerido para opacidades de Bootstrap (ej: bg-opacity-10) */
+    --bs-primary-rgb: 0, 0, 254 !important;
+
+    /* Enlaces */
+    --bs-link-color: #0000FE !important;
+    --bs-link-hover-color: #0000B8 !important;
 }
 
-/* Reafirmar el nuevo color en los botones principales */
+/* 1. Botón Relleno (.btn-primary) */
 .btn-primary {
     background-color: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
+    color: #ffffff !important;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: #b71c1c !important; /* Un tono un poco más oscuro para cuando pasas el cursor */
-    border-color: #b71c1c !important;
-}
-
-.btn-outline-primary {
-    color: var(--bs-primary) !important;
-    border-color: var(--bs-primary) !important;
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:active {
-    background-color: var(--bs-primary) !important;
-    border-color: var(--bs-primary) !important;
+    background-color: #0000B8 !important;
+    border-color: #0000B8 !important;
     color: #ffffff !important;
 }
 
+/* 2. Botón Delineado (.btn-outline-primary) con hover sutil */
+.btn-outline-primary {
+    color: #0000FE !important;
+    border-color: #0000FE !important;
+    background-color: #ffffff !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: #F3F5FE !important; /* Fondo azul sutil */
+    color: #0000B8 !important;            /* Texto e icono azul oscuro */
+    border-color: #0000B8 !important;       /* Borde azul oscuro */
+}
+
+/* 3. Utilidades de Texto y Bordes */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+/* NOTA: Se omite .bg-primary para no romper la utilidad bg-opacity-* de Bootstrap (como bg-opacity-10 en badges).
+   Bootstrap calculará los fondos transparentes de manera nativa usando --bs-primary-rgb. */
+/* ==========================================================================
+   CONFIGURACIÓN EFECTOS CARDS
+   ========================================================================== */
 
 /* Activa la opacidad solo al pasar el cursor sobre la tarjeta */
 .hover-overlay {
@@ -196,5 +217,22 @@ h1, h2, h3, h4, h5, h6,
 }
 .bid-history-item:hover {
     background-color: #f8f9fa;
+}
+
+
+/* Botón "Cargar más" de ancho completo */
+.btn-cargar-mas {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: var(--blue-darkest, #1a1a1a) !important;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-cargar-mas:hover,
+.btn-cargar-mas:focus {
+    background-color: #f0f0f0;
+    border-color: #d8d8d8;
+    color: #000000 !important;
 }
 
