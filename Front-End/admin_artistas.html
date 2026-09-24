@@ -128,7 +128,37 @@
     </div>
 </div>
 
-<!-- AQUÍ IRÁ EL MODAL DEL DOCUMENTO (Bloque 3) -->
+<!-- MODAL DE PREVISUALIZACIÓN DE DOCUMENTO -->
+<div class="modal fade" id="modalDocumento" tabindex="-1" aria-labelledby="modalDocumentoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            
+            <!-- Cabecera del Modal -->
+            <div class="modal-header bg-light border-0">
+                <h5 class="modal-title fw-bold" id="modalDocumentoLabel">Revisión de Documento: Daniela Mardones</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <!-- Cuerpo del Modal (AQUÍ VA TU IMAGEN) -->
+            <div class="modal-body text-center p-4 bg-secondary bg-opacity-10">
+                
+                <!-- INSTRUCCIÓN: Cambia el 'src' por la ruta de tu foto de carnet de prueba -->
+                <img src="images/carnet.jpg" class="img-fluid rounded shadow-sm border" alt="Documento de Identidad" style="max-height: 70vh; object-fit: contain;">
+                
+            </div>
+            
+            <!-- Pie del Modal con Acciones Rápidas -->
+            <div class="modal-footer border-0 bg-light justify-content-between">
+                <p class="small text-muted mb-0">Revisa que la foto y el RUT coincidan claramente.</p>
+                <div>
+                    <button type="button" class="btn btn-outline-danger fw-semibold me-2" data-bs-dismiss="modal">Rechazar Imagen</button>
+                    <button type="button" class="btn btn-success fw-semibold" data-bs-dismiss="modal">Documento Válido</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
