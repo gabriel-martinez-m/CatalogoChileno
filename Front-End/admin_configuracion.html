@@ -48,7 +48,32 @@
         <main class="container-fluid px-4 py-4">
             
             <div class="row g-4">
-                <!-- AQUÍ IRÁN LAS TARJETAS (Bloques 2 y 3) -->
+                <!-- FEE -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <h6 class="fw-bold">Porcentaje de Comisión (FEE)</h6>
+                        <p class="small text-muted">Ajusta el margen de retención global para nuevas ventas.</p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" value="15" min="1" max="50">
+                            <span class="input-group-text bg-light">%</span>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-auto fw-semibold">Actualizar FEE</button>
+                    </div>
+                </div>
+
+                <!-- Banners -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                        <h6 class="fw-bold">Alertas Informativas (Banners)</h6>
+                        <p class="small text-muted">Despliega un mensaje en la parte superior del catálogo.</p>
+                        <textarea class="form-control mb-3" rows="2" placeholder="Escribe la alerta... (Ej: Mantenimiento programado)"></textarea>
+                        <div class="d-flex gap-2 mt-auto">
+                            <button class="btn btn-warning flex-fill text-dark fw-bold">Publicar Alerta</button>
+                            <button class="btn btn-outline-secondary">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
         </main>
