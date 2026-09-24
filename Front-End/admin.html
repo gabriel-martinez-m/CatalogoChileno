@@ -54,36 +54,79 @@
         <!-- Contenedor interno -->
         <main class="container-fluid px-4 py-4">
     
-    <!-- Sección 1: Dashboard y KPIs (HU-87) -->
-    <section id="kpis" class="mb-5">
-        <h4 class="fw-bold mb-3"><i class="fa-solid fa-chart-line me-2"></i>Visión Ejecutiva</h4>
-        <div class="row g-3">
-            <div class="col-12 col-md-3">
-                <div class="card border-0 shadow-sm bg-white h-100 p-3">
-                    <span class="text-muted small">Ventas Totales</span>
-                    <h2 class="fw-bold text-dark mb-0">$2.450.000</h2>
+<!-- Sección 1: Dashboard y KPIs -->
+<section id="kpis" class="mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold text-dark mb-0">Dashboard Control panel</h5>
+        <span class="text-muted small">Home - Dashboard</span>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 mb-4">
+        <!-- Visitas -->
+        <div class="col">
+            <div class="card border-0 shadow-sm h-100 p-3 bg-white">
+                <div class="d-flex justify-content-between">
+                    <div class="text-muted small fw-semibold">Visitas a la página</div>
+                    <span class="badge bg-primary bg-opacity-10 text-primary">Mensual</span>
                 </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="card border-0 shadow-sm bg-white h-100 p-3">
-                    <span class="text-muted small">Comisiones Retenidas (FEE)</span>
-                    <h2 class="fw-bold text-success mb-0">$367.500</h2>
-                </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="card border-0 shadow-sm bg-white h-100 p-3">
-                    <span class="text-muted small">Nuevos Artistas (Mes)</span>
-                    <h2 class="fw-bold text-primary mb-0">24</h2>
-                </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="card border-0 shadow-sm bg-white h-100 p-3">
-                    <span class="text-muted small">Obras en Espera</span>
-                    <h2 class="fw-bold text-danger mb-0">12</h2>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                        <i class="fa-solid fa-users fa-lg text-primary"></i>
+                    </div>
+                    <h3 class="fw-bold mb-0">1,547</h3>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Ventas -->
+        <div class="col">
+            <div class="card border-0 shadow-sm h-100 p-3 bg-white">
+                <div class="d-flex justify-content-between">
+                    <div class="text-muted small fw-semibold">Ventas de imágenes</div>
+                    <span class="badge bg-info bg-opacity-10 text-info">Mensual</span>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                        <i class="fa-solid fa-bag-shopping fa-lg text-info"></i>
+                    </div>
+                    <h3 class="fw-bold mb-0">$4,689</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Ganancia -->
+        <div class="col">
+            <div class="card border-0 shadow-sm h-100 p-3 bg-white">
+                <div class="d-flex justify-content-between">
+                    <div class="text-muted small fw-semibold">Ganancia Empresa (15%)</div>
+                    <span class="badge bg-success bg-opacity-10 text-success">Neto</span>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                        <i class="fa-solid fa-chart-pie fa-lg text-success"></i>
+                    </div>
+                    <h3 class="fw-bold mb-0">$703</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Comprador -->
+        <div class="col">
+            <div class="card border-0 shadow-sm h-100 p-3 bg-white">
+                <div class="d-flex justify-content-between">
+                    <div class="text-muted small fw-semibold">Principal Comprador</div>
+                    <span class="badge bg-warning bg-opacity-10 text-warning">Global</span>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                        <i class="fa-solid fa-earth-americas fa-lg text-warning"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold mb-0 text-dark">EE.UU.</h5>
+                        <small class="text-muted">45% del total</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Sección 2: Moderación de Obras y Publicidad (HU-96 y HU-30) -->
     <section id="moderacion" class="mb-5">
