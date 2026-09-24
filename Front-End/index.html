@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,92 +9,177 @@
     <!-- 1. Estilos locales de Bootstrap (CSS) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- 2. Mis estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
 </head>
 
 <body>
-        <!-- NavBar -->
 
- <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top">
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top shadow-sm">
     <div class="container-fluid px-4">
-        
-        <!-- 1. Logotipo / Imagen + Nombre a la izquierda -->
-        <a class="navbar-brand d-flex align-items-center text-dark" href="#">
-            <img src="images/LogoCatalogoChileno.svg" alt="Logotipo" height="24" class="d-inline-block me-2">
+
+        <!-- 1. Logotipo -->
+        <a class="navbar-brand d-flex align-items-center text-dark me-lg-4" href="index.html">
+            <img src="images/LogoCatalogoChileno.svg" alt="Logotipo Catálogo Chileno" height="28" class="d-inline-block">
         </a>
 
-        <!-- 2. Botón Hamburguesa (para móviles) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- 3. Contenido colapsable (Enlaces + Botón) -->
-        <div class="collapse navbar-collapse" id="navbarContenido">
+        <!-- Botones para vista móvil (Carrito rápido + Hamburguesa) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+            <!-- Carrito Móvil -->
+            <a href="carrito.html" class="btn btn-light position-relative rounded-circle p-2" aria-label="Carrito de compras">
+                <i class="fa-solid fa-cart-shopping text-dark fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                </span>
+            </a>
             
-            <!-- Menú de Navegación -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+                aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- 3. Contenido colapsable (Menú + Acciones) -->
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarContenido">
+
+            <!-- Menú de Navegación Principal -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-1">
+                
+                <!-- Inicio -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link fw-semibold active" aria-current="page" href="index.html">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+
+                <!-- Submenú 1: Fotografías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropFotografias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fotografías
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropFotografias">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-mountain me-2 text-muted"></i>Paisajes</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-user-group me-2 text-muted"></i>Personas</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-city me-2 text-muted"></i>Ciudades</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-masks-theater me-2 text-muted"></i>Fiestas Típicas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-leaf me-2 text-muted"></i>Fauna y Naturaleza Chilena</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+
+                <!-- Submenú 2: Videos -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropVideos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Videos
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropVideos">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-tv me-2 text-muted"></i>4K UHD</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-plane-up me-2 text-muted"></i>Tomas con Dron</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-film me-2 text-muted"></i>Time-Lapse / Archivo</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+
+                <!-- Submenú 3: Recursos -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropRecursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Recursos
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropRecursos">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-palette me-2 text-muted"></i>Ilustraciones</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-bezier-curve me-2 text-muted"></i>Vectores</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-layer-group me-2 text-muted"></i>Plantillas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-music me-2 text-muted"></i>Audio y Música</a></li>
+                    </ul>
                 </li>
+
+                <!-- Submenú 4: Subastas -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold d-flex align-items-center gap-1" href="#" id="dropSubastas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Subastas
+                        <span class="badge bg-danger rounded-pill ms-1 px-2" style="font-size: 0.65rem;">EN VIVO</span>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropSubastas">
+                        <li><a class="dropdown-item py-2 fw-semibold text-danger" href="subastas.html"><i class="fa-solid fa-gavel me-2"></i>Subastas en Vivo</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-regular fa-calendar me-2 text-muted"></i>Próximas Subastas</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-clock-rotate-left me-2 text-muted"></i>Finalizadas</a></li>
+                    </ul>
+                </li>
+
             </ul>
 
-            <!-- Botones de Acción / Iniciar Sesión -->
-            <div class="d-flex gap-2">
-                <a href="login.html" class="btn btn-outline-primary">Iniciar sesión</a>
+            <!-- Acciones de Usuario + Carrito (Escritorio) -->
+            <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
+                
+                <!-- Carrito de Compras (Desktop) -->
+                <a href="carrito.html" class="btn btn-light position-relative rounded-circle p-2 d-none d-lg-flex align-items-center justify-content-center shadow-sm flex-shrink-0" style="width: 42px; height: 42px;" title="Carrito de compras">
+                    <i class="fa-solid fa-cart-shopping text-dark"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-white">
+                        2
+                    </span>
+                </a>
+
+                <!-- Área de Autenticación / Cuenta de Usuario -->
+                <div class="d-flex align-items-center gap-2 w-100 w-lg-auto">
+                    <a href="login.html" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold w-100 w-lg-auto d-flex align-items-center justify-content-center gap-2 text-nowrap">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Iniciar Sesión</span>
+                    </a>
+                    <a href="registro.html" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold w-100 w-lg-auto d-none d-xl-inline-block text-nowrap">
+                        Registrarse
+                    </a>
+                </div>
+
             </div>
 
         </div>
     </div>
 </nav>
 
-<!-- Sección Hero (Inicio estilo Behance) -->
-<section class="hero-section text-center py-5 lg-3 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-9">
-                
-                <!-- Título H1 Principal -->
-                <h1 class="display-3 fw-bold text-dark lh-sm mb-3" style="letter-spacing: -1.5px;">
-                    Los mejores <span class="text-primary">creadores de Chile</span> están en nuestro catálogo
-                </h1>
-                
-                <!-- Subtítulo descriptivo -->
-                <p class="fs-5 text-muted mb-4 px-md-5 fw-normal">
-                    Una plataforma integral para conectar a talentosos artistas visuales con clientes que buscan llevar sus proyectos al siguiente nivel .
-                </p>
-                
-                <!-- Contenedor de Botones de Registro -->
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                    <!-- Botón 1: Registrarse como Artista -->
-                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-semibold shadow-sm fs-6">
-                        Registrarse como Artista
-                    </a>
-                    
-                    <!-- Botón 2: Registrarse como Cliente -->
-                    <a href="#" class="btn btn-soft-primary btn-lg rounded-pill px-4 py-3 fw-semibold fs-6">
-                        Registrarse como Cliente
-                    </a>
-                </div>
+    <!-- Sección Hero (Inicio estilo Behance) -->
+    <section class="hero-section text-center py-5 lg-3 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
 
+                    <!-- Título H1 Principal -->
+                    <h1 class="display-3 fw-bold text-dark lh-sm mb-3" style="letter-spacing: -1.5px;">
+                        Los mejores <span class="text-primary">creadores de Chile</span> están en nuestro catálogo
+                    </h1>
+
+                    <!-- Subtítulo descriptivo -->
+                    <p class="fs-5 text-muted mb-4 px-md-5 fw-normal">
+                        Una plataforma integral para conectar a talentosos artistas visuales con clientes que buscan
+                        llevar sus proyectos al siguiente nivel .
+                    </p>
+
+                    <!-- Contenedor de Botones de Registro -->
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <!-- Botón 1: Registrarse como Artista -->
+                        <a href="#" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-semibold shadow-sm fs-6">
+                            Registrarse como Artista
+                        </a>
+
+                        <!-- Botón 2: Registrarse como Cliente -->
+                        <a href="#" class="btn btn-soft-primary btn-lg rounded-pill px-4 py-3 fw-semibold fs-6">
+                            Registrarse como Cliente
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
- <!-- 1. Carrusel  
+    <!-- 1. Carrusel  
 
 <main class="container-fluid px-0">
   <div id="carouselExampleCaptions" class="carousel slide overflow-hidden" data-bs-ride="false">
@@ -138,1272 +224,2170 @@
 
 
     <!-- 1. BARRA DE BÚSQUEDA Y FILTROS -->
-<main class="containe-fluid px-4 py-4">
-   <div class="card shadow-sm px-4 p-3 mb-1 bg-light border-0">
-    <form class="row g-2 align-items-center">
-        
-        <!-- 1. Campo de Búsqueda de Texto -->
-        <div class="col-12 col-lg-4">
-            <div class="input-group">
-                <span class="input-group-text bg-white border-end-0">
-                    <i class="fa-solid fa-magnifying-glass text-muted"></i>
-                </span>
-                <input type="text" class="form-control border-start-0" placeholder="Buscar por título, palabra clave...">
-            </div>
+    <main class="containe-fluid px-4 py-4">
+        <div class="card shadow-sm px-4 p-3 mb-1 bg-light border-0">
+            <form class="row g-2 align-items-center">
+
+                <!-- 1. Campo de Búsqueda de Texto -->
+                <div class="col-12 col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0"
+                            placeholder="Buscar por título, palabra clave...">
+                    </div>
+                </div>
+
+                <!-- 2. Filtro: Tipo de Obra -->
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <select class="form-select" aria-label="Tipo de obra">
+                        <option value="" selected>Tipo de obra</option>
+                        <option value="fotografia">Fotografía</option>
+                        <option value="video">Video</option>
+                        <option value="audio">Audio</option>
+                        <option value="vector">Vector</option>
+                        <option value="3d">3D</option>
+                    </select>
+                </div>
+
+                <!-- 3. Filtro: Región de Chile -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <select class="form-select" aria-label="Región de Chile">
+                        <option value="" selected>Todas las regiones</option>
+                        <option value="arica">Arica y Parinacota</option>
+                        <option value="tarapaca">Tarapacá</option>
+                        <option value="antofagasta">Antofagasta</option>
+                        <option value="atacama">Atacama</option>
+                        <option value="coquimbo">Coquimbo</option>
+                        <option value="valparaiso">Valparaíso</option>
+                        <option value="metropolitana">Región Metropolitana</option>
+                        <option value="ohiggins">O'Higgins</option>
+                        <option value="maule">Maule</option>
+                        <option value="nuble">Ñuble</option>
+                        <option value="biobio">Biobío</option>
+                        <option value="araucania">La Araucanía</option>
+                        <option value="los_rios">Los Ríos</option>
+                        <option value="los_lagos">Los Lagos</option>
+                        <option value="aysen">Aysén</option>
+                        <option value="magallanes">Magallanes y Antártica</option>
+                    </select>
+                </div>
+
+                <!-- 4. Filtro: Ordenar por -->
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <select class="form-select" aria-label="Ordenar resultados">
+                        <option value="reciente" selected>Más reciente</option>
+                        <option value="antiguo">Más antiguo</option>
+                    </select>
+                </div>
+
+                <!-- 5. Botón Filtrar -->
+                <div class="col-12 col-sm-6 col-lg-1">
+                    <button type="submit" class="btn btn-primary w-100" title="Aplicar Filtros">
+                        <i class="fa-solid fa-filter"></i>
+                    </button>
+                </div>
+
+            </form>
         </div>
+    </main>
 
-        <!-- 2. Filtro: Tipo de Obra -->
-        <div class="col-12 col-sm-6 col-lg-2">
-            <select class="form-select" aria-label="Tipo de obra">
-                <option value="" selected>Tipo de obra</option>
-                <option value="fotografia">Fotografía</option>
-                <option value="video">Video</option>
-                <option value="audio">Audio</option>
-                <option value="vector">Vector</option>
-                <option value="3d">3D</option>
-            </select>
+    <!-- categorias -->
+
+    <div class="container-fluid px-4">
+        <div class="d-flex flex-nowrap overflow-auto gap-2 p-2 align-items-center">
+
+            <!-- Botón 3 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
+                Novedades
+            </a>
+
+            <!-- Botón 1 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/01.jpg');">
+                <i class="fa-solid fa-star me-2"></i>Para ti
+            </a>
+
+            <!-- Botón 2 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
+                <i class="fa-solid fa-heart me-2"></i>Siguiendo
+            </a>
+            <!-- Botón 2 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
+                <i class="fa-solid fa-gavel me-2"></i>Subastas
+            </a>
+
+
+
+            <!-- Botón 3 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
+                <i class="fa-solid fa-camera me-2"></i>Fotografía
+            </a>
+
+            <!-- Botón 4 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/04.jpg');">
+                <i class="fa-solid fa-video me-2"></i>Video
+            </a>
+
+            <!-- Botón 5 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/05.jpg');">
+                <i class="fa-solid fa-plane me-2"></i>Tomas Aéreas
+            </a>
+
+            <!-- Botón 6 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+                Ilustración
+            </a>
+
+            <!-- Botón 7 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+                Íconos
+            </a>
+
+            <!-- Botón 8 -->
+            <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
+                Modelos 3D
+            </a>
+
         </div>
+    </div>
 
-        <!-- 3. Filtro: Región de Chile -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <select class="form-select" aria-label="Región de Chile">
-                <option value="" selected>Todas las regiones</option>
-                <option value="arica">Arica y Parinacota</option>
-                <option value="tarapaca">Tarapacá</option>
-                <option value="antofagasta">Antofagasta</option>
-                <option value="atacama">Atacama</option>
-                <option value="coquimbo">Coquimbo</option>
-                <option value="valparaiso">Valparaíso</option>
-                <option value="metropolitana">Región Metropolitana</option>
-                <option value="ohiggins">O'Higgins</option>
-                <option value="maule">Maule</option>
-                <option value="nuble">Ñuble</option>
-                <option value="biobio">Biobío</option>
-                <option value="araucania">La Araucanía</option>
-                <option value="los_rios">Los Ríos</option>
-                <option value="los_lagos">Los Lagos</option>
-                <option value="aysen">Aysén</option>
-                <option value="magallanes">Magallanes y Antártica</option>
-            </select>
-        </div>
+    <!-- tarjetas -->
 
-        <!-- 4. Filtro: Ordenar por -->
-        <div class="col-12 col-sm-6 col-lg-2">
-            <select class="form-select" aria-label="Ordenar resultados">
-                <option value="reciente" selected>Más reciente</option>
-                <option value="antiguo">Más antiguo</option>
-            </select>
-        </div>
-
-        <!-- 5. Botón Filtrar -->
-        <div class="col-12 col-sm-6 col-lg-1">
-            <button type="submit" class="btn btn-primary w-100" title="Aplicar Filtros">
-                <i class="fa-solid fa-filter"></i>
-            </button>
-        </div>
-
-    </form>
-</div>
-</main>
-
-<!-- categorias -->
-
-<div class="container-fluid px-4">
-    <div class="d-flex flex-nowrap overflow-auto gap-2 p-2 align-items-center">
-
-        <!-- Botón 3 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
+    <div class="container-fluid px-4 py-4">
+        <h3 class="fw-semibold text-dark mb-4">
             Novedades
-        </a>
+        </h3>
 
-        <!-- Botón 1 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/01.jpg');">
-            <i class="fa-solid fa-star me-2"></i>Para ti
-        </a>
+        <!-- Grilla de Tarjetas (Añadido el id="gridProductos") -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="gridProductos">
 
-        <!-- Botón 2 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
-            <i class="fa-solid fa-heart me-2"></i>Siguiendo
-        </a>
-        <!-- Botón 2 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/02.jpg');">
-            <i class="fa-solid fa-gavel me-2"></i>Subastas
-        </a>
+            <!-- AQUÍ VAN TUS TARJETAS ACTUALES (<div class="col">...</div>) -->
 
-        
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
 
-        <!-- Botón 3 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/03.jpg');">
-            <i class="fa-solid fa-camera me-2"></i>Fotografía
-        </a>
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
 
-        <!-- Botón 4 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/04.jpg');">
-            <i class="fa-solid fa-video me-2"></i>Video
-        </a>
+                        <!-- Imagen Limpia -->
+                        <img src="images/01.jpg" alt="Imagen de la obra">
 
-        <!-- Botón 5 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/05.jpg');">
-            <i class="fa-solid fa-plane me-2"></i>Tomas Aéreas
-        </a>
+                        <!-- Capa Flotante (Overlay en Hover) -->
 
-        <!-- Botón 6 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
-            Ilustración
-        </a>
+                        <div onclick="detalle('images/01.jpg')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
 
-        <!-- Botón 7 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
-            Íconos
-        </a>
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
 
-        <!-- Botón 8 -->
-        <a href="#" class="btn category-btn fw-bold rounded-3 px-4 py-3 shadow-sm" 
-           style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg');">
-            Modelos 3D
-        </a>
-
-    </div>
-</div>
-
-<!-- tarjetas -->
-
-<div class="container-fluid px-4 py-4">
-    <!-- row-cols-1: 1 columna en celulares -->
-    <!-- row-cols-sm-2: 2 columnas en tablets -->
-    <!-- row-cols-lg-4: 4 columnas en monitores/laptops -->
-    <!-- g-4: espacio (gap) entre las tarjetas -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-
-<!-- Tarjeta 1 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/01.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$7.990</span>
-                        <span class="text-decoration-line-through text-white-50">$8.990</span>
-                    </div>
-                    <a href="producto.html" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Caballos
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Juan Pablo Urrutia
-            </p>
-
-        </div>
-
-    </div>
-</div>
-       <!-- Tarjeta 2 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/02.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Mural urbano
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniela Mardones
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 3 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/03.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$5.990</span>
-                        <span class="text-decoration-line-through text-white-50">$6.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Santiago
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniel Lopez C.
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 4 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/04.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Torres del Paine
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Romina Salazar
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- simulacion fila 2 -->
-
-<!-- Tarjeta 1 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/01.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$7.990</span>
-                        <span class="text-decoration-line-through text-white-50">$8.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Caballos
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Juan Pablo Urrutia
-            </p>
-
-        </div>
-
-    </div>
-</div>
-       <!-- Tarjeta 2 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/02.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Mural urbano
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniela Mardones
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 3 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/03.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$5.990</span>
-                        <span class="text-decoration-line-through text-white-50">$6.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Santiago
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniel Lopez C.
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 4 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/04.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Torres del Paine
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Romina Salazar
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Simulación de fila 3 -->
-
-<!-- Tarjeta 1 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/01.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$7.990</span>
-                        <span class="text-decoration-line-through text-white-50">$8.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Caballos
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Juan Pablo Urrutia
-            </p>
-
-        </div>
-
-    </div>
-</div>
-       <!-- Tarjeta 2 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/02.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Mural urbano
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniela Mardones
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 3 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/03.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$5.990</span>
-                        <span class="text-decoration-line-through text-white-50">$6.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Santiago
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Daniel Lopez C.
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- Tarjeta 4 -->
-<div class="col">
-    <div class="card border-0 bg-transparent h-100 card-hover">
-        
-        <!-- Imagen con Hover Overlay -->
-        <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
-            
-            <!-- Imagen Limpia -->
-            <img src="images/04.jpg" alt="Imagen de la obra">
-            
-            <!-- Capa Flotante (Overlay en Hover) -->
-            <div class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
-                
-                <!-- Parte superior: Ubicación + Fecha y Corazón -->
-                <div class="d-flex justify-content-between align-items-start">
-                    
-                    <!-- Ubicación y Fecha apiladas -->
-                    <div class="d-flex flex-column gap-1 align-items-start">
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
-                        </span>
-                        <span class="badge bg-dark bg-opacity-75 fw-normal">
-                            <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
-                        </span>
-                    </div>
-
-                    <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
-                    <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Parte inferior: Precio sutil y Botón Comprar -->
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <span class="fw-semibold text-white fs-6">$9.990</span>
-                        <span class="text-decoration-line-through text-white-50">$10.990</span>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
-                        Comprar
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información fija debajo de la imagen -->
-        <div class="pt-2 px-1">
-            
-            <!-- Fila 1: Título | Likes y Vistas -->
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
-                    Torres del Paine
-                </h6>
-
-                <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
-                    <span class="d-flex align-items-center gap-1" title="Me gusta">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>126</span>
-                    </span>
-                    <span class="d-flex align-items-center gap-1" title="Vistas">
-                        <i class="fa-solid fa-eye"></i>
-                        <span>786</span>
-                    </span>
-                </div>
-            </div>
-
-            <!-- Fila 2: Nombre del Autor -->
-            <p class="text-muted small mb-0 text-truncate">
-                Romina Salazar
-            </p>
-
-        </div>
-
-    </div>
-</div>
-
-    </div>
-</div>
-
-<!-- Formulario de Ingreso -->
-    <div class="container py-5 bg-light">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
-                
-                <!-- Tarjeta del Formulario -->
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-                    <div class="card-body p-4 p-sm-5">
-                        
-                        <!-- Encabezado / Logo -->
-                        <div class="text-center mb-4">
-                            <h3>Inicia sesión o regístrate para ver más proyectos</h3>
-                        </div>
-
-                        <!-- Selector de Rol (Artista vs Cliente) -->
-                        <div class="mb-4">
-                            <label class="form-label small fw-semibold text-muted d-block text-center mb-2">
-                                ¿Cómo deseas ingresar?
-                            </label>
-                            <div class="btn-group w-100" role="group" aria-label="Tipo de usuario">
-                                
-                                <!-- Opción Artista -->
-                                <input type="radio" class="btn-check" name="userType" id="typeArtista" autocomplete="off" checked>
-                                <label class="btn btn-outline-primary py-2 fw-semibold" for="typeArtista">
-                                    <i class="fa-solid fa-palette me-1"></i> Artista
-                                </label>
-
-                                <!-- Opción Cliente -->
-                                <input type="radio" class="btn-check" name="userType" id="typeCliente" autocomplete="off">
-                                <label class="btn btn-outline-primary py-2 fw-semibold" for="typeCliente">
-                                    <i class="fa-solid fa-user me-1"></i> Cliente
-                                </label>
-                                
-                            </div>
-                        </div>
-
-                        <!-- Formulario de Login -->
-                        <form action="#" method="POST" novalidate>
-                            
-                            <!-- Campo Correo Electrónico -->
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="loginEmail" placeholder="nombre@ejemplo.com" required>
-                                <label for="loginEmail">
-                                    <i class="fa-regular fa-envelope me-1 text-secondary"></i> Correo electrónico
-                                </label>
-                            </div>
-
-                            <!-- Campo Contraseña -->
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="loginPassword" placeholder="Contraseña" required>
-                                <label for="loginPassword">
-                                    <i class="fa-solid fa-lock me-1 text-secondary"></i> Contraseña
-                                </label>
-                            </div>
-
-                            <!-- Opciones: Recordarme y Olvidé contraseña -->
-                            <div class="d-flex justify-content-between align-items-center mb-4 small">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                                    <label class="form-check-input-label text-muted" for="rememberMe">
-                                        Recordarme
-                                    </label>
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
                                 </div>
-                                <a href="#" class="text-primary text-decoration-none fw-semibold">
-                                    ¿Olvidaste tu contraseña?
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$7.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$8.990</span>
+                                </div>
+                                <a href="login.html" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
                                 </a>
                             </div>
 
-                            <!-- Botón Iniciar Sesión -->
-                            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold shadow-sm fs-6 mb-3">
-                                Iniciar Sesión
-                            </button>
+                        </div>
+                    </div>
 
-                        </form>
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
 
-                        <!-- Pie de tarjeta: Registro -->
-                        <div class="text-center pt-3 border-top">
-                            <span class="text-muted small">¿Aún no tienes una cuenta?</span>
-                            <a href="#" class="text-primary fw-bold small text-decoration-none ms-1">
-                                Regístrate
-                            </a>
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
                         </div>
 
-                    </div>
-                </div>
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
 
+                    </div>
+
+                </div>
             </div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/02.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Mural urbano
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniela Mardones
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/03.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$5.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$6.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Santiago
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniel Lopez C.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/04.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Torres del Paine
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Romina Salazar
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- simulacion fila 2 -->
+
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/01.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$7.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$8.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/02.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Mural urbano
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniela Mardones
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/03.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$5.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$6.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Santiago
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniel Lopez C.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/04.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Torres del Paine
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Romina Salazar
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Simulación de fila 3 -->
+
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/01.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$7.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$8.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/02.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Quillón, Ñuble
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 10 May, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Mural urbano
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniela Mardones
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/03.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Santiago, Santiago
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 24 Jul, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$5.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$6.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Santiago
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Daniel Lopez C.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-1 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/04.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Fecha y Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Fecha apiladas -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Puerto Natales, Magallanes
+                                    </span>
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-calendar-days me-1"></i> 14 Sep, 2026
+                                    </span>
+                                </div>
+
+                                <!-- Corazón (se rellena de rojo al hover o con la clase .active) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Precio sutil y Botón Comprar -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-semibold text-white fs-6">$9.990</span>
+                                    <span class="text-decoration-line-through text-white-50">$10.990</span>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-sm px-3 fw-semibold">
+                                    Comprar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Torres del Paine
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-0 text-truncate">
+                            Romina Salazar
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- Pie de página (Footer) -->
-    <!-- Footer Oscuro -->
-<footer class="bg-dark text-white pt-5 pb-4 mt-auto">
-    <div class="container">
-        
-        <!-- Fila Principal -->
-        <div class="row g-4 mb-5">
-            
-            <!-- Columna 1: Marca y Redes Sociales -->
-            <div class="col-12 col-lg-4">
-                <a href="index.html" class="text-decoration-none text-white d-inline-block mb-3">
-                    <h4 class="fw-bold mb-0">
-                        <i class="fa-solid fa-shapes text-primary me-2"></i>CatalogoChileno
-                    </h4>
-                </a>
-                <p class="text-white-50 small mb-4 pe-lg-4">
-                    El punto de encuentro donde artistas visuales y clientes conectan para dar vida a proyectos únicos. Inspiración, talento y obras locales en un solo lugar.
-                </p>
-                
-                <!-- Redes Sociales -->
-                <div class="d-flex gap-2">
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white" style="width: 38px; height: 38px;" title="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white" style="width: 38px; height: 38px;" title="Behance">
-                        <i class="fa-brands fa-behance"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white" style="width: 38px; height: 38px;" title="X (Twitter)">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white" style="width: 38px; height: 38px;" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Columna 2: Explorar -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <h6 class="fw-bold text-white mb-3">Explorar</h6>
-                <ul class="list-unstyled footer-links small">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Fotografía</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Ilustración</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Diseño 3D</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Vectores & UI</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Obras recientes</a></li>
-                </ul>
-            </div>
+    </div> <!-- Cierre del row -->
 
-            <!-- Columna 3: Comunidad -->
-            <div class="col-6 col-md-3 col-lg-2">
-                <h6 class="fw-bold text-white mb-3">Comunidad</h6>
-                <ul class="list-unstyled footer-links small">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Soy Artista</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Soy Cliente</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Planes y Precios</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Centro de Ayuda</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Preguntas Frecuentes</a></li>
-                </ul>
-            </div>
+    <!-- Botón "Ver más" centrado debajo de la grilla -->
+    <div class="text-center mt-3 mb-3">
+        <button type="button"
+            class="btn btn-outline-primary btn-lg rounded-pill px-5 py-3 fw-semibold shadow-sm fs-6 d-inline-flex align-items-center gap-2"
+            id="btnCargarMas">
+            <span id="textoBoton">Ver más obras</span>
+            <!-- Spinner circular oculto por defecto -->
+            <span id="spinnerCarga" class="spinner-border spinner-border-sm d-none" role="status"
+                aria-hidden="true"></span>
+        </button>
+    </div>
 
-            <!-- Columna 4: Suscripción / Boletín -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <h6 class="fw-bold text-white mb-3">Únete al boletín</h6>
-                <p class="text-white-50 small mb-3">
-                    Recibe las obras destacadas de la semana y nuevas colecciones directamente en tu correo.
-                </p>
-                <form action="#" method="POST">
-                    <div class="input-group mb-2">
-                        <input type="email" class="form-control bg-dark text-white border-secondary small" placeholder="Tu correo electrónico" required>
-                        <button class="btn btn-primary px-3 fw-semibold" type="submit">
-                            Suscribirme
-                        </button>
-                    </div>
-                    <small class="text-white-50" style="font-size: 0.75rem;">
-                        <i class="fa-solid fa-lock me-1"></i> Respetamos tu privacidad.
-                    </small>
-                </form>
-            </div>
+    </div> <!-- Cierre del container-fluid -->
 
-        </div>
-
+    <div class="container-fluid px-4 py-4">
         <!-- Línea Divisora -->
         <hr class="border-secondary opacity-25 my-4">
 
-        <!-- Fila Inferior: Copyright + Enlaces Legales -->
-        <div class="row align-items-center small text-white-50">
-            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                &copy; 2026 CatálogoChileno. Todos los derechos reservados.
+        <h3 class="fw-semibold text-dark mb-4">
+            Videos en Subasta
+        </h3>
+
+        <!-- Grilla de Tarjetas (Añadido el id="gridProductos") -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="gridProductos">
+
+
+            <!-- Tarjeta 1 (Subasta de Video) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Contenedor con Proporción de Video (16:9) -->
+                    <div class="ratio ratio-16x9 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen / Miniatura del Video -->
+                        <img src="images/dron_portada.png" alt="Miniatura de la obra audiovisual">
+
+                        <!-- Indicador visual fijo de Play -->
+                        <div class="position-absolute top-50 start-50 translate-middle pointer-events-none opacity-75">
+                            <div class="bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                                style="width: 46px; height: 46px;">
+                                <i class="fa-solid fa-play ms-1 fs-5"></i>
+                            </div>
+                        </div>
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle2('images/dron_portada.png')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante | Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos limpio -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Duración + Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1 d-flex align-items-center gap-2 flex-wrap">
+                                        <span
+                                            class="badge bg-black bg-opacity-50 text-white border border-white border-opacity-25 fw-normal">
+                                            <i class="fa-regular fa-circle-play me-1"></i>02:45
+                                        </span>
+                                        <span>Base: $7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="subasta.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo del video -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#" class="text-white-50 text-decoration-none me-3">Privacidad</a>
-                <a href="#" class="text-white-50 text-decoration-none me-3">Términos de uso</a>
-                <a href="#" class="text-white-50 text-decoration-none">Cookies</a>
+
+            <!-- Tarjeta 2 (Subasta de Video) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Contenedor con Proporción de Video (16:9) -->
+                    <div class="ratio ratio-16x9 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen / Miniatura del Video -->
+                        <img src="images/dron_portada.png" alt="Miniatura de la obra audiovisual">
+
+                        <!-- Indicador visual fijo de Play -->
+                        <div class="position-absolute top-50 start-50 translate-middle pointer-events-none opacity-75">
+                            <div class="bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                                style="width: 46px; height: 46px;">
+                                <i class="fa-solid fa-play ms-1 fs-5"></i>
+                            </div>
+                        </div>
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle2('images/dron_portada.png')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante | Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos limpio -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Duración + Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1 d-flex align-items-center gap-2 flex-wrap">
+                                        <span
+                                            class="badge bg-black bg-opacity-50 text-white border border-white border-opacity-25 fw-normal">
+                                            <i class="fa-regular fa-circle-play me-1"></i>02:45
+                                        </span>
+                                        <span>Base: $7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="subasta.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo del video -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
+
+            <!-- Tarjeta 3 (Subasta de Video) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Contenedor con Proporción de Video (16:9) -->
+                    <div class="ratio ratio-16x9 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen / Miniatura del Video -->
+                        <img src="images/dron_portada.png" alt="Miniatura de la obra audiovisual">
+
+                        <!-- Indicador visual fijo de Play -->
+                        <div class="position-absolute top-50 start-50 translate-middle pointer-events-none opacity-75">
+                            <div class="bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                                style="width: 46px; height: 46px;">
+                                <i class="fa-solid fa-play ms-1 fs-5"></i>
+                            </div>
+                        </div>
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle2('images/dron_portada.png')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante | Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos limpio -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Duración + Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1 d-flex align-items-center gap-2 flex-wrap">
+                                        <span
+                                            class="badge bg-black bg-opacity-50 text-white border border-white border-opacity-25 fw-normal">
+                                            <i class="fa-regular fa-circle-play me-1"></i>02:45
+                                        </span>
+                                        <span>Base: $7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="subasta.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo del video -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 (Subasta de Video) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Contenedor con Proporción de Video (16:9) -->
+                    <div class="ratio ratio-16x9 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen / Miniatura del Video -->
+                        <img src="images/dron_portada.png" alt="Miniatura de la obra audiovisual">
+
+                        <!-- Indicador visual fijo de Play -->
+                        <div class="position-absolute top-50 start-50 translate-middle pointer-events-none opacity-75">
+                            <div class="bg-dark bg-opacity-75 text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                                style="width: 46px; height: 46px;">
+                                <i class="fa-solid fa-play ms-1 fs-5"></i>
+                            </div>
+                        </div>
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle2('images/dron_portada.png')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante | Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos limpio -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Duración + Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1 d-flex align-items-center gap-2 flex-wrap">
+                                        <span
+                                            class="badge bg-black bg-opacity-50 text-white border border-white border-opacity-25 fw-normal">
+                                            <i class="fa-regular fa-circle-play me-1"></i>02:45
+                                        </span>
+                                        <span>Base: $7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="subasta.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo del video -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- cierre tarjetas -->
+
+        </div>
+    </div>
+
+    <!-- FIn seccion -->
+
+    <!-- Botón "Ver más" centrado debajo de la grilla -->
+    <div class="text-center mt-3 mb-3">
+        <button type="button"
+            class="btn btn-outline-primary btn-lg rounded-pill px-5 py-3 fw-semibold shadow-sm fs-6 d-inline-flex align-items-center gap-2"
+            id="btnCargarMas">
+            <span id="textoBoton">Ver más obras</span>
+        </button>
+    </div>
+
+
+
+    <div class="container-fluid px-4 py-4">
+        <!-- Línea Divisora -->
+        <hr class="border-secondary opacity-25 my-4">
+
+        <h3 class="fw-semibold text-dark mb-4">
+            Fotos en Subasta
+        </h3>
+
+        <!-- Grilla de Tarjetas (Añadido el id="gridProductos") -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="gridProductos">
+
+            <!-- Tarjeta foto 1 (Subasta) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/video1.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle('images/01.jpg')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante + Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos (stopPropagation evita activar el clic del overlay) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1">
+                                        Base: <span class="text-white-50 me-2">$7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="producto.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta (Visibilidad garantizada sin hacer hover) -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta foto 2 (Subasta) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/video1.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle('images/01.jpg')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante + Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos (stopPropagation evita activar el clic del overlay) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1">
+                                        Base: <span class="text-white-50 me-2">$7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="producto.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta (Visibilidad garantizada sin hacer hover) -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta foto 3 (Subasta) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/video1.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle('images/01.jpg')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante + Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos (stopPropagation evita activar el clic del overlay) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1">
+                                        Base: <span class="text-white-50 me-2">$7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="producto.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta (Visibilidad garantizada sin hacer hover) -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tarjeta foto 4 (Subasta) -->
+            <div class="col">
+                <div class="card border-0 bg-transparent h-100 card-hover">
+
+                    <!-- Imagen con Hover Overlay -->
+                    <div class="ratio ratio-4x3 rounded-2 overflow-hidden shadow-sm position-relative">
+
+                        <!-- Imagen Limpia -->
+                        <img src="images/video1.jpg" alt="Imagen de la obra">
+
+                        <!-- Capa Flotante (Overlay en Hover) -->
+                        <div onclick="detalle('images/01.jpg')"
+                            class="hover-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column justify-content-between p-3 text-white">
+
+                            <!-- Parte superior: Ubicación + Tiempo restante + Corazón -->
+                            <div class="d-flex justify-content-between align-items-start">
+
+                                <!-- Ubicación y Tiempo Restante -->
+                                <div class="d-flex flex-column gap-1 align-items-start">
+                                    <span class="badge bg-dark bg-opacity-75 fw-normal">
+                                        <i class="fa-solid fa-location-dot me-1"></i> Parral, Maule
+                                    </span>
+                                    <!-- Insignia de tiempo restante -->
+                                    <span class="badge bg-danger bg-opacity-90 fw-semibold">
+                                        <i class="fa-solid fa-clock me-1"></i> 04h 25m restantes
+                                    </span>
+                                </div>
+
+                                <!-- Corazón Favoritos (stopPropagation evita activar el clic del overlay) -->
+                                <button type="button" class="btn btn-like" aria-label="Añadir a favoritos"
+                                    onclick="event.stopPropagation();">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <!-- Parte inferior: Datos de Subasta + Botón Participar -->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div>
+                                    <!-- Precio Base + Cantidad de Pujas -->
+                                    <div class="small text-white-50 mb-1">
+                                        Base: <span class="text-white-50 me-2">$7.990</span>
+                                        <span class="badge bg-secondary bg-opacity-50 fw-normal">
+                                            <i class="fa-solid fa-gavel me-1"></i>8 pujas
+                                        </span>
+                                    </div>
+                                    <!-- Puja Actual -->
+                                    <div>
+                                        <span class="small text-white-50 me-1">Puja actual:</span>
+                                        <span class="fw-bold text-warning fs-5">$15.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Botón para ir al detalle del producto -->
+                                <a href="producto.html" class="btn btn-warning btn-sm px-3 fw-bold text-dark shadow-sm">
+                                    Participar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Información fija debajo de la imagen -->
+                    <div class="pt-2 px-1">
+
+                        <!-- Fila 1: Título | Likes y Vistas -->
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-semibold text-dark mb-0 text-truncate me-2">
+                                Caballos
+                            </h6>
+
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0 text-muted small">
+                                <span class="d-flex align-items-center gap-1" title="Me gusta">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>126</span>
+                                </span>
+                                <span class="d-flex align-items-center gap-1" title="Vistas">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>786</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre del Autor -->
+                        <p class="text-muted small mb-2 text-truncate">
+                            Juan Pablo Urrutia
+                        </p>
+
+                        <!-- Fila 3: Resumen Fijo de Subasta (Visibilidad garantizada sin hacer hover) -->
+                        <div
+                            class="d-flex justify-content-between align-items-center pt-2 border-top border-light-subtle small">
+                            <span class="text-muted">
+                                Puja actual: <strong class="text-dark">$15.000</strong>
+                            </span>
+                            <span class="text-danger fw-semibold">
+                                <i class="fa-regular fa-clock me-1"></i>04h 25m
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        
+
+            
+
+            <!-- Fin tarjetas -->
+
+            
+
+        </div>
+    </div>
+  <!-- Botón "Ver más" centrado debajo de la grilla -->
+    <div class="text-center mt-3 mb-3">
+        <button type="button"
+            class="btn btn-outline-primary btn-lg rounded-pill px-5 py-3 fw-semibold shadow-sm fs-6 d-inline-flex align-items-center gap-2"
+            id="btnCargarMas">
+            <span id="textoBoton">Ver más obras</span>
+        </button>
+    </div>
+    <!-- Fin seccion -->
+
+    <!-- Pie de página (Footer) -->
+    <!-- Footer Oscuro -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-auto">
+        <div class="container">
+
+            <!-- Fila Principal -->
+            <div class="row g-4 mb-5">
+
+                <!-- Columna 1: Marca y Redes Sociales -->
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="text-decoration-none text-white d-inline-block mb-3">
+                        <h4 class="fw-bold mb-0">
+                            <i class="fa-solid fa-shapes text-primary me-2"></i>CatalogoChileno
+                        </h4>
+                    </a>
+                    <p class="text-white-50 small mb-4 pe-lg-4">
+                        El punto de encuentro donde artistas visuales y clientes conectan para dar vida a proyectos
+                        únicos. Inspiración, talento y obras locales en un solo lugar.
+                    </p>
+
+                    <!-- Redes Sociales -->
+                    <div class="d-flex gap-2">
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white"
+                            style="width: 38px; height: 38px;" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white"
+                            style="width: 38px; height: 38px;" title="Behance">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white"
+                            style="width: 38px; height: 38px;" title="X (Twitter)">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center social-icon text-white"
+                            style="width: 38px; height: 38px;" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Explorar -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="fw-bold text-white mb-3">Explorar</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Fotografía</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Ilustración</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Diseño 3D</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Vectores & UI</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Obras recientes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Comunidad -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="fw-bold text-white mb-3">Comunidad</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Soy Artista</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Soy Cliente</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Planes y Precios</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Centro de Ayuda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Suscripción / Boletín -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h6 class="fw-bold text-white mb-3">Únete al boletín</h6>
+                    <p class="text-white-50 small mb-3">
+                        Recibe las obras destacadas de la semana y nuevas colecciones directamente en tu correo.
+                    </p>
+                    <form action="#" method="POST">
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control bg-dark text-white border-secondary small"
+                                placeholder="Tu correo electrónico" required>
+                            <button class="btn btn-primary px-3 fw-semibold" type="submit">
+                                Suscribirme
+                            </button>
+                        </div>
+                        <small class="text-white-50" style="font-size: 0.75rem;">
+                            <i class="fa-solid fa-lock me-1"></i> Respetamos tu privacidad.
+                        </small>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Línea Divisora -->
+            <hr class="border-secondary opacity-25 my-4">
+
+            <!-- Fila Inferior: Copyright + Enlaces Legales -->
+            <div class="row align-items-center small text-white-50">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    &copy; 2026 CatálogoChileno. Todos los derechos reservados.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Privacidad</a>
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Términos de uso</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Cookies</a>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-</footer>
+
+
+    </footer>
 
     <!-- 2. Scripts locales de Bootstrap (JS) -->
     <!-- Nota: Usamos 'bootstrap.bundle.min.js' porque incluye Popper.js (necesario para desplegables y modales) -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/prueba.js"></script>
 
 </body>
+
 </html>

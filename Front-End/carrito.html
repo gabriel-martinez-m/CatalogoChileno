@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto Web - Bootstrap 5.2.3</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light py-3 bg-white sticky-top shadow-sm">
+    <div class="container-fluid px-4">
+
+        <!-- 1. Logotipo -->
+        <a class="navbar-brand d-flex align-items-center text-dark me-lg-4" href="index.html">
+            <img src="images/LogoCatalogoChileno.svg" alt="Logotipo Catálogo Chileno" height="28" class="d-inline-block">
+        </a>
+
+        <!-- Botones para vista móvil (Carrito rápido + Hamburguesa) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+            <!-- Carrito Móvil -->
+            <a href="carrito.html" class="btn btn-light position-relative rounded-circle p-2" aria-label="Carrito de compras">
+                <i class="fa-solid fa-cart-shopping text-dark fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                </span>
+            </a>
+            
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+                aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- 3. Contenido colapsable (Menú + Acciones) -->
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarContenido">
+
+            <!-- Menú de Navegación Principal -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-1">
+                
+                <!-- Inicio -->
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+
+                <!-- Submenú 1: Fotografías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropFotografias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fotografías
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropFotografias">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-mountain me-2 text-muted"></i>Paisajes</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-user-group me-2 text-muted"></i>Personas</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-city me-2 text-muted"></i>Ciudades</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-masks-theater me-2 text-muted"></i>Fiestas Típicas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-leaf me-2 text-muted"></i>Fauna y Naturaleza Chilena</a></li>
+                    </ul>
+                </li>
+
+                <!-- Submenú 2: Videos -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropVideos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Videos
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropVideos">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-tv me-2 text-muted"></i>4K UHD</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-plane-up me-2 text-muted"></i>Tomas con Dron</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-film me-2 text-muted"></i>Time-Lapse / Archivo</a></li>
+                    </ul>
+                </li>
+
+                <!-- Submenú 3: Recursos -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropRecursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Recursos
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropRecursos">
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-palette me-2 text-muted"></i>Ilustraciones</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-bezier-curve me-2 text-muted"></i>Vectores</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-layer-group me-2 text-muted"></i>Plantillas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-music me-2 text-muted"></i>Audio y Música</a></li>
+                    </ul>
+                </li>
+
+                <!-- Submenú 4: Subastas -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold d-flex align-items-center gap-1" href="#" id="dropSubastas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Subastas
+                        <span class="badge bg-danger rounded-pill ms-1 px-2" style="font-size: 0.65rem;">EN VIVO</span>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3" aria-labelledby="dropSubastas">
+                        <li><a class="dropdown-item py-2 fw-semibold text-danger" href="subastas.html"><i class="fa-solid fa-gavel me-2"></i>Subastas en Vivo</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-regular fa-calendar me-2 text-muted"></i>Próximas Subastas</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fa-solid fa-clock-rotate-left me-2 text-muted"></i>Finalizadas</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- Acciones de Usuario + Carrito (Escritorio) -->
+            <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
+                
+                <!-- Carrito de Compras (Desktop) -->
+                <a href="carrito.html" class="btn btn-light position-relative rounded-circle p-2 d-none d-lg-flex align-items-center justify-content-center shadow-sm flex-shrink-0" style="width: 42px; height: 42px;" title="Carrito de compras">
+                    <i class="fa-solid fa-cart-shopping text-dark"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-white">
+                        2
+                    </span>
+                </a>
+
+                <!-- Área de Autenticación / Cuenta de Usuario -->
+                <div class="d-flex align-items-center gap-2 w-100 w-lg-auto">
+                    <a href="login.html" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold w-100 w-lg-auto d-flex align-items-center justify-content-center gap-2 text-nowrap">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Iniciar Sesión</span>
+                    </a>
+                    <a href="registro.html" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold w-100 w-lg-auto d-none d-xl-inline-block text-nowrap">
+                        Registrarse
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    <main class="container my-4 my-lg-5">
+    
+    <!-- Encabezado de la página -->
+    <div class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom">
+        <h1 class="h3 fw-bold text-dark mb-0">
+            <i class="fa-solid fa-cart-shopping me-2 text-primary"></i>Carrito de Compras
+        </h1>
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fs-6 fw-semibold">
+            2 productos
+        </span>
+    </div>
+
+    <div class="row g-4">
+        
+        <!-- Columna Izquierda: Lista de Productos en el Carrito -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-3">
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush">
+                        
+                        <!-- Producto 1: Video 4K -->
+                        <li class="list-group-item p-3 p-sm-4">
+                            <div class="row align-items-center g-3">
+                                <!-- Miniatura -->
+                                <div class="col-4 col-sm-3 col-md-2">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden bg-dark">
+                                        <img src="images/video1.jpg" class="object-fit-cover" alt="Amanecer en el Volcán Osorno">
+                                    </div>
+                                </div>
+                                
+                                <!-- Información del Producto -->
+                                <div class="col-8 col-sm-6 col-md-7">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary small mb-1">Video 4K UHD</span>
+                                    <h6 class="fw-bold text-dark mb-1 text-truncate">
+                                        Amanecer en el Volcán Osorno
+                                    </h6>
+                                    <p class="text-muted small mb-1">
+                                        Creador: <span class="text-dark fw-semibold">Juan Pablo Urrutia</span>
+                                    </p>
+                                    <small class="text-muted d-block" style="font-size: 0.75rem;">
+                                        Licencia: <strong class="text-dark">Comercial Estándar (Descarga inmediata)</strong>
+                                    </small>
+                                </div>
+                                
+                                <!-- Precio y Eliminar -->
+                                <div class="col-12 col-sm-3 col-md-3 text-sm-end d-flex d-sm-block justify-content-between align-items-center mt-2 mt-sm-0">
+                                    <div class="fw-bold fs-5 text-dark mb-sm-2">$19.990</div>
+                                    <button type="button" class="btn btn-outline-danger btn-sm rounded-pill border-0 px-2 py-1" title="Eliminar del carrito">
+                                        <i class="fa-regular fa-trash-can me-1"></i>
+                                        <span class="small">Quitar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Producto 2: Fotografía de alta resolución -->
+                        <li class="list-group-item p-3 p-sm-4">
+                            <div class="row align-items-center g-3">
+                                <!-- Miniatura -->
+                                <div class="col-4 col-sm-3 col-md-2">
+                                    <div class="ratio ratio-4x3 rounded-3 overflow-hidden bg-dark">
+                                        <img src="images/01.jpg" class="object-fit-cover" alt="Caballos en el campo">
+                                    </div>
+                                </div>
+                                
+                                <!-- Información del Producto -->
+                                <div class="col-8 col-sm-6 col-md-7">
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary small mb-1">Fotografía RAW/JPG</span>
+                                    <h6 class="fw-bold text-dark mb-1 text-truncate">
+                                        Caballos
+                                    </h6>
+                                    <p class="text-muted small mb-1">
+                                        Creador: <span class="text-dark fw-semibold">Tasha Marie</span>
+                                    </p>
+                                    <small class="text-muted d-block" style="font-size: 0.75rem;">
+                                        Licencia: <strong class="text-dark">Uso Editorial</strong>
+                                    </small>
+                                </div>
+                                
+                                <!-- Precio y Eliminar -->
+                                <div class="col-12 col-sm-3 col-md-3 text-sm-end d-flex d-sm-block justify-content-between align-items-center mt-2 mt-sm-0">
+                                    <div class="fw-bold fs-5 text-dark mb-sm-2">$7.990</div>
+                                    <button type="button" class="btn btn-outline-danger btn-sm rounded-pill border-0 px-2 py-1" title="Eliminar del carrito">
+                                        <i class="fa-regular fa-trash-can me-1"></i>
+                                        <span class="small">Quitar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Botón Seguir Explorando -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="index.html" class="btn btn-link text-decoration-none text-muted p-0">
+                    <i class="fa-solid fa-arrow-left me-1"></i> Seguir explorando obras
+                </a>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Resumen de la Orden y Pago -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-light">
+                <h5 class="fw-bold text-dark mb-3">Resumen del pedido</h5>
+
+                <!-- Desglose de precios -->
+                <ul class="list-unstyled mb-3 small text-muted">
+                    <li class="d-flex justify-content-between mb-2">
+                        <span>Subtotal (2 productos)</span>
+                        <strong class="text-dark">$27.980</strong>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                        <span>IVA (19% incluido)</span>
+                        <strong class="text-dark">$4.467</strong>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2 text-success">
+                        <span>Descuento aplicado</span>
+                        <strong>-$0</strong>
+                    </li>
+                </ul>
+
+                <!-- Campo para Cupón de Descuento -->
+                <div class="mb-4">
+                    <label for="cupon" class="form-label small text-muted">¿Tienes un código de descuento?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm text-uppercase" id="cupon" placeholder="CÓDIGO">
+                        <button class="btn btn-outline-primary btn-sm fw-semibold" type="button">Aplicar</button>
+                    </div>
+                </div>
+
+                <hr class="my-3 border-secondary opacity-25">
+
+                <!-- Total a pagar -->
+                <div class="d-flex justify-content-between align-items-baseline mb-4">
+                    <span class="fw-bold fs-5 text-dark">Total</span>
+                    <span class="fw-bold fs-3 text-primary">$27.980</span>
+                </div>
+
+                <!-- Botón Pagar -->
+                <a href="checkout.html" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold shadow-sm mb-3 fs-6">
+                    Proceder al Pago <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+
+                <!-- Garantía y Formatos de Pago -->
+                <div class="p-3 bg-white rounded-3 border text-center">
+                    <small class="text-muted d-block mb-2">
+                        <i class="fa-solid fa-shield-halved text-success me-1"></i> Pago 100% seguro y encriptado
+                    </small>
+                    <div class="d-flex justify-content-center align-items-center gap-2 text-secondary opacity-75 fs-5">
+                        <i class="fa-solid fa-credit-card" title="Tarjetas de Crédito/Débito"></i>
+                        <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                        <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                        <span class="badge bg-secondary bg-opacity-10 text-dark small" style="font-size: 0.65rem;">Webpay / MercadoPago</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+
+
+
+    <!-- 2. Scripts locales de Bootstrap (JS) -->
+    <!-- Nota: Usamos 'bootstrap.bundle.min.js' porque incluye Popper.js (necesario para desplegables y modales) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/prueba.js"></script>
+
+</body>
+
+</html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
+    <title>Mi Proyecto Web - Bootstrap 5.2.3</title>
 
     <!-- 1. Estilos locales de Bootstrap (CSS) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -139,23 +140,30 @@
     </div>
 </nav>
 
-    <div class="container my-4 my-lg-5">
+    <main class="container my-4 my-lg-5">
     
-    <!-- Header: Artista y Botones de Acción -->
-    <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <!-- Datos del Artista -->
+    <!-- Encabezado: Artista, Estado de Subasta y Acciones -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom gap-3">
+        
+        <!-- Datos del Creador / Realizador -->
         <div class="d-flex align-items-center gap-3">
-            <img src="images/perfil.png" class="rounded-circle shadow-sm" style="width: 46px; height: 46px; object-fit: cover;" alt="Foto del Artista">
+            <img src="images/01.jpg" class="rounded-circle shadow-sm" style="width: 48px; height: 48px; object-fit: cover;" alt="Juan Pablo Urrutia">
             <div>
-                <h5 class="fw-bold mb-0 text-dark">Juan Pablo Urrutia</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <h5 class="fw-bold mb-0 text-dark">Juan Pablo Urrutia</h5>
+                    <span class="badge bg-primary bg-opacity-10 text-primary small">Realizador Verificado</span>
+                </div>
                 <small class="text-muted">
                     <i class="fa-solid fa-location-dot me-1 text-danger"></i>Parral, Maule
                 </small>
             </div>
         </div>
 
-        <!-- Botones secundarios -->
+        <!-- Estado en Vivo y Botones -->
         <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill d-flex align-items-center gap-2 me-2">
+                <span class="live-dot"></span> Subasta Digital En Vivo
+            </span>
             <button type="button" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Favoritos">
                 <i class="fa-regular fa-heart"></i>
             </button>
@@ -165,87 +173,160 @@
         </div>
     </div>
 
-    <!-- Contenido Principal (Imagen + Ficha de Compra) -->
+    <!-- Contenido Principal -->
     <div class="row g-4 align-items-start">
         
-        <!-- Columna Izquierda: Foto Completa con Clic para Zoom -->
-        <div class="col-lg-7 text-center">
-            <div class="position-relative bg-light rounded-3 p-2 border shadow-sm">
-                <!-- Imagen completa -->
-                <img src="images/01.jpg" 
-                     class="img-fluid rounded img-zoomable" 
-                     alt="Título de la obra"
-                     data-bs-toggle="modal" 
-                     data-bs-target="#imageZoomModal"
-                     style="max-height: 75vh; object-fit: contain;"
-                     title="Haz clic para ampliar la imagen">
+        <!-- Columna Izquierda: Reproductor / Preview Audiovisual -->
+        <div class="col-lg-7">
+            <div class="position-relative bg-dark rounded-2 overflow-hidden shadow-sm border border-secondary border-opacity-25">
                 
-                <!-- Botón flotante para sugerir Zoom -->
-                <div class="position-absolute bottom-0 end-0 m-3">
-                    <button class="btn btn-dark bg-opacity-75 btn-sm text-white rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#imageZoomModal">
-                        <i class="fa-solid fa-magnifying-glass-plus me-1"></i> Ampliar
-                    </button>
+                <!-- Reproductor de Video de Muestra -->
+                <video class="w-100 d-block rounded-2" style="max-height: 55vh; object-fit: contain;" controls poster="images/dron_portada.png">
+                    <source src="videos/dron.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+
+                <!-- Badge Informativo de Preview -->
+                <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 text-white border border-white border-opacity-25">
+                        <i class="fa-solid fa-film me-1 text-warning"></i> Preview en baja resolución (con marca de agua)
+                    </span>
                 </div>
             </div>
+            
+            <small class="text-muted d-block text-center mt-2">
+                <i class="fa-solid fa-circle-info me-1"></i> Al ganar la subasta obtendrás el archivo original en máxima calidad sin marcas de agua.
+            </small>
         </div>
 
-        <!-- Columna Derecha: Datos de la obra, Precio y Botón Comprar -->
+        <!-- Columna Derecha: Panel de Subasta Digital -->
         <div class="col-lg-5">
-            <div class="card border-0 bg-light p-4 rounded-3 shadow-sm">
+            <div class="card border-0 bg-light p-4 rounded-4 shadow-sm">
                 
-                <!-- Categoria / Badge -->
-                <span class="badge bg-primary bg-opacity-10 text-primary w-auto align-self-start mb-2 px-3 py-2 rounded-pill fw-normal">
-                    Naturaleza
-                </span>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-primary px-2.5 py-1">Video 4K</span>
+                    <span class="badge bg-secondary bg-opacity-25 text-dark">Material de Archivo</span>
+                </div>
 
-                <!-- Título de la Foto -->
-                <h2 class="fw-bold text-dark mb-3">Atardecer en la Culebra</h2>
-                
-                <p class="text-muted small mb-4">
-                    Fotografía de alta resolución capturada en sector precordillerano. Ideal para proyectos de diseño, impresiones o uso editorial.
-                </p>
+                <h2 class="fw-bold text-dark mb-1">Amanecer en el Volcán Osorno</h2>
+                <p class="text-muted small mb-3">Toma aérea cinematográfica registrada con drone profesional en 10-bit Color. Incluye derechos de uso comercial.</p>
 
-                <!-- Caja de Precio y Acción de Compra -->
-                <div class="p-3 bg-white rounded-3 border mb-4 shadow-sm">
-                    <small class="text-muted d-block mb-1">Precio de Licencia</small>
-                    <div class="d-flex align-items-baseline gap-2 mb-3">
-                        <span class="fs-2 fw-bold text-dark">$19.990</span>
-                        <del class="text-muted small">$25.990</del>
-                    </div>
-
-                    <a href="#" class="btn btn-primary w-100 btn-lg fw-semibold shadow-sm mb-2">
-                        Comprar
-                    </a>
-                    
-                    <div class="text-center">
-                        <small class="text-muted">
-                            <i class="fa-solid fa-shield-halved me-1 text-success"></i> Descarga inmediata en alta calidad
-                        </small>
+                <!-- Caja Contador de Tiempo Restante -->
+                <div class="card bg-dark text-white border-0 rounded-3 p-3 mb-4 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="text-white-50 d-block text-uppercase fw-semibold" style="font-size: 0.75rem;">Tiempo Restante</small>
+                            <span class="fs-4 fw-bold text-warning" id="cronometro">04h 25m 12s</span>
+                        </div>
+                        <i class="fa-solid fa-clock fs-2 text-warning opacity-75"></i>
                     </div>
                 </div>
 
-                <!-- Metadatos de la Imagen -->
-                <h6 class="fw-bold text-dark mb-3">Detalles de la imagen</h6>
+                <!-- Métricas de la Subasta -->
+                <div class="row g-2 text-center mb-4">
+                    <div class="col-4">
+                        <div class="bg-white p-2 rounded-3 border">
+                            <small class="text-muted d-block">Base</small>
+                            <strong class="text-dark">$25.000</strong>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="bg-white p-2 rounded-3 border border-warning">
+                            <small class="text-muted d-block">Puja Actual</small>
+                            <strong class="text-warning fs-6">$48.000</strong>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="bg-white p-2 rounded-3 border">
+                            <small class="text-muted d-block">Pujas</small>
+                            <strong class="text-dark">12</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     ESTADO 1: USUARIO CLIENTE LOGUEADO (PUEDE PUJAR)
+                     ==================================================== -->
+                <div class="bg-white p-3 rounded-3 border shadow-sm mb-4">
+                    <label for="montoPuja" class="form-label fw-semibold text-dark small mb-2">
+                        <i class="fa-solid fa-gavel text-primary me-1"></i> Realizar una oferta por la obra
+                    </label>
+                    
+                    <form action="#" method="POST" onsubmit="event.preventDefault();">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text bg-light fw-bold text-muted">$</span>
+                            <input type="number" class="form-control form-control-lg fw-bold" id="montoPuja" value="50000" min="50000" step="2000">
+                            <button type="submit" class="btn btn-primary px-4 fw-bold">
+                                Pujar
+                            </button>
+                        </div>
+                        <small class="text-muted d-block" style="font-size: 0.75rem;">
+                            Siguiente puja mínima: <strong>$50.000</strong> (Mínimo +$2.000)
+                        </small>
+                    </form>
+                </div>
+
+                <!-- ====================================================
+                     ESTADO 2: SI NO ES CLIENTE (NO LOGUEADO O ES ARTISTA)
+                     ==================================================== -->
+                <!--
+                <div class="alert alert-warning border-warning d-flex align-items-center gap-3 p-3 rounded-3 mb-4" role="alert">
+                    <i class="fa-solid fa-lock fs-3 text-warning flex-shrink-0"></i>
+                    <div>
+                        <strong class="d-block text-dark">¿Quieres pujar por este material?</strong>
+                        <span class="small text-muted">Debes ingresar como <strong>Cliente</strong> para participar en subastas.</span>
+                        <div class="mt-2">
+                            <a href="login.html" class="btn btn-warning btn-sm fw-bold px-3 text-dark">
+                                Iniciar Sesión como Cliente
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <!-- Historial de Pujas -->
+                <h6 class="fw-bold text-dark mb-2">Historial de Pujas</h6>
+                <div class="bg-white rounded-3 border overflow-hidden mb-4">
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <strong class="text-dark d-block">Productora Maule Film</strong>
+                                <small class="text-muted">Hace 8 minutos</small>
+                            </div>
+                            <span class="badge bg-success bg-opacity-10 text-success fw-bold fs-6">$48.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <span class="text-muted">Cliente #102</span>
+                                <small class="text-muted d-block">Hace 20 minutos</small>
+                            </div>
+                            <span class="text-muted fw-semibold">$45.000</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ficha Técnica Digital del Archivo -->
+                <h6 class="fw-bold text-dark mb-2">Especificaciones Técnicas Digitales</h6>
                 <ul class="list-unstyled text-muted small d-flex flex-column gap-2 mb-0">
                     <li class="d-flex justify-content-between border-bottom pb-2">
-                        <span><i class="fa-solid fa-calendar-days me-2 text-secondary"></i>Fecha:</span>
-                        <strong class="text-dark">14 Sep, 2026</strong>
+                        <span><i class="fa-solid fa-video me-2 text-secondary"></i>Resolución:</span>
+                        <strong class="text-dark">4K UHD (3840 x 2160)</strong>
                     </li>
                     <li class="d-flex justify-content-between border-bottom pb-2">
-                        <span><i class="fa-solid fa-expand me-2 text-secondary"></i>Resolución:</span>
-                        <strong class="text-dark">6000 x 4000 px (300 DPI)</strong>
+                        <span><i class="fa-solid fa-stopwatch me-2 text-secondary"></i>Duración:</span>
+                        <strong class="text-dark">02:45 min (60 FPS)</strong>
                     </li>
                     <li class="d-flex justify-content-between border-bottom pb-2">
-                        <span><i class="fa-solid fa-file-image me-2 text-secondary"></i>Formato:</span>
-                        <strong class="text-dark">JPG</strong>
+                        <span><i class="fa-solid fa-file-code me-2 text-secondary"></i>Formatos incluidos:</span>
+                        <strong class="text-dark">ProRes 422 HQ / MP4 H.265</strong>
                     </li>
                     <li class="d-flex justify-content-between border-bottom pb-2">
-                        <span><i class="fa-solid fa-thumbs-up me-2 text-secondary"></i>Me gusta:</span>
-                        <strong class="text-dark">126</strong>
+                        <span><i class="fa-solid fa-certificate me-2 text-secondary"></i>Licencia:</span>
+                        <strong class="text-dark">Uso Comercial Exclusivo</strong>
                     </li>
                     <li class="d-flex justify-content-between">
-                        <span><i class="fa-solid fa-eye me-2 text-secondary"></i>Vistas:</span>
-                        <strong class="text-dark">786</strong>
+                        <span><i class="fa-solid fa-cloud-arrow-down me-2 text-secondary"></i>Entrega:</span>
+                        <strong class="text-success"><i class="fa-solid fa-bolt me-1"></i>Descarga Inmediata</strong>
                     </li>
                 </ul>
 
@@ -253,34 +334,6 @@
         </div>
 
     </div>
-</div>
-
-<!-- ==========================================
-     MODAL DE ZOOM (Aparece al hacer clic)
-     ========================================== -->
-<div class="modal fade" id="imageZoomModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content bg-transparent border-0">
-            <div class="modal-header border-0 pb-0">
-                <button type="button" class="btn-close btn-close-white ms-auto shadow-none" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body text-center p-0">
-                <img src="images/01.jpg" class="img-fluid rounded shadow-lg" style="max-height: 90vh; object-fit: contain;" alt="Vista ampliada de la obra">
-            </div>
-        </div>
-    </div>
-</div>
-
-     <!-- Pie de página (Footer) -->
-    <footer class="bg-light text-center text-muted py-3 border-top mt-auto">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Mi Proyecto Web. Desarrollado en clase Fullstack.</p>
-        </div>
-    </footer>
-
-    <!-- 2. Scripts locales de Bootstrap (JS) -->
-    <!-- Nota: Usamos 'bootstrap.bundle.min.js' porque incluye Popper.js (necesario para desplegables y modales) -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+</main>
 
 </body>
-</html>
