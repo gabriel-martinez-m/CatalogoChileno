@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Registro | Catálogo Chileno</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between">
+
+    <!-- NavBar Adaptado -->
+    <nav class="navbar navbar-light py-3 bg-white sticky-top shadow-sm">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+            <!-- Logotipo -->
+            <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+                <img src="images/LogoCatalogoChileno.svg" alt="Logotipo Catálogo Chileno" height="28" class="d-inline-block">
+            </a>
+
+            <!-- Acción de Usuario -->
+            <div class="d-flex align-items-center gap-2">
+                <a href="login.html" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Iniciar Sesión</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container my-auto py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Únete a nuestra plataforma</h1>
+            <p class="text-muted fs-5">Selecciona el tipo de cuenta que deseas crear</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Opción Cliente -->
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                        <div class="mb-3">
+                            <div class="bg-primary-subtle text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fa-solid fa-user-large fs-2"></i>
+                            </div>
+                            <h2 class="h4 fw-bold">Soy Cliente</h2>
+                            <p class="text-muted small">Quiero explorar el catálogo, comprar obras de arte únicas y seguir a mis artistas favoritos.</p>
+                        </div>
+                        <a href="registro-cliente.html" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold">
+                            Registrarme como Cliente <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opción Artista -->
+            <div class="col-12 col-md-5 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                        <div class="mb-3">
+                            <div class="bg-primary-subtle text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fa-solid fa-palette fs-2"></i>
+                            </div>
+                            <h2 class="h4 fw-bold">Soy Artista</h2>
+                            <p class="text-muted small">Quiero vender mi arte, verificar mi identidad y recibir pagos por mis obras publicadas.</p>
+                        </div>
+                        <a href="registro-artista.html" class="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold">
+                            Registrarme como Artista <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-3 text-center text-muted small">
+        <div class="container">
+            &copy; 2026 Catálogo Chileno. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

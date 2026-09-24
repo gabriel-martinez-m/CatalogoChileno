@@ -236,3 +236,35 @@ h1, h2, h3, h4, h5, h6,
     color: #000000 !important;
 }
 
+/* ==========================================================================
+   SELECTOR DE ROL (SEGMENTED CONTROL MODERNO)
+   ========================================================================== */
+.role-selector-track {
+    background-color: #F3F5FE;
+    padding: 4px;
+    border-radius: 50rem;
+    display: flex;
+    gap: 4px;
+    border: 1px solid #D8DFFA;
+}
+
+.role-selector-btn {
+    border-radius: 50rem !important;
+    color: #586695;
+    border: none !important;
+    background-color: transparent;
+    transition: all 0.25s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.role-selector-btn:hover {
+    color: #0000FE;
+}
+
+/* Estado Activo / Seleccionado */
+.btn-check:checked + .role-selector-btn {
+    background-color: #0000FE !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 254, 0.25);
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente | Catálogo Chileno</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between">
+
+    <!-- NavBar Adaptado -->
+    <nav class="navbar navbar-light py-3 bg-white sticky-top shadow-sm">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+            <!-- Logotipo -->
+            <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+                <img src="images/LogoCatalogoChileno.svg" alt="Logotipo Catálogo Chileno" height="28" class="d-inline-block">
+            </a>
+
+            <!-- Acción de Usuario -->
+            <div class="d-flex align-items-center gap-2">
+                <a href="registro.html" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span>Cambiar perfil</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container my-auto py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 rounded-pill">Cuenta de Cliente</span>
+                            <h1 class="h3 fw-bold">Crear Cuenta</h1>
+                            <p class="text-muted small">Completa tus datos para comenzar a explorar y comprar obras</p>
+                        </div>
+
+                        <form id="formCliente" action="/api/registro/cliente" method="POST" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="clienteNombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="clienteNombre" name="nombre" placeholder="Ej: María González" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="clienteEmail" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="clienteEmail" name="email" placeholder="usuario@dominio.cl" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="clienteTelefono" class="form-label">Teléfono</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+56</span>
+                                        <input type="tel" class="form-control" id="clienteTelefono" name="telefono" placeholder="912345678" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="clienteNacimiento" class="form-label">Año de Nacimiento</label>
+                                    <input type="number" class="form-control" id="clienteNacimiento" name="anio_nacimiento" min="1920" max="2008" placeholder="2000" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="clientePassword" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="clientePassword" name="password" minlength="8" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="clientePasswordConfirm" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="clientePasswordConfirm" name="password_confirmation" minlength="8" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="clienteTerminos" required>
+                                        <label class="form-check-label text-muted small" for="clienteTerminos">
+                                            Acepto los <a href="#" class="text-primary text-decoration-none">Términos y Condiciones</a> y las <a href="#" class="text-primary text-decoration-none">Políticas de Privacidad</a>.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold">
+                                        <i class="fa-solid fa-user-plus me-2"></i>Registrarme como Cliente
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <span class="text-muted small">¿Ya tienes una cuenta?</span>
+                            <a href="login.html" class="text-primary text-decoration-none small fw-bold ms-1">Inicia sesión</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-3 text-center text-muted small">
+        <div class="container">
+            &copy; 2026 Catálogo Chileno. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Artista | Catálogo Chileno</title>
+
+    <!-- 1. Estilos locales de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 2. Mis estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between">
+
+    <!-- NavBar Adaptado -->
+    <nav class="navbar navbar-light py-3 bg-white sticky-top shadow-sm">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+
+            <!-- Logotipo -->
+            <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+                <img src="images/LogoCatalogoChileno.svg" alt="Logotipo Catálogo Chileno" height="28" class="d-inline-block">
+            </a>
+
+            <!-- Acción de Usuario -->
+            <div class="d-flex align-items-center gap-2">
+                <a href="registro.html" class="btn btn-outline-primary rounded-pill px-3 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2 text-nowrap">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span>Cambiar perfil</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container my-auto py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 rounded-pill">Cuenta de Artista</span>
+                            <h1 class="h3 fw-bold">Postulación y Registro de Artista</h1>
+                            <p class="text-muted small">Ingresa tus datos personales, legales y bancarios para poder publicar y vender tus obras</p>
+                        </div>
+
+                        <form id="formArtista" action="/api/registro/artista" method="POST" enctype="multipart/form-data" novalidate>
+                            
+                            <!-- Sección 1: Datos Personales -->
+                            <h2 class="h6 fw-bold text-uppercase text-primary mb-3 border-bottom pb-2">
+                                <i class="fa-solid fa-id-card me-2"></i>1. Datos de Cuenta
+                            </h2>
+                            <div class="row g-3 mb-4">
+                                <div class="col-12">
+                                    <label for="artistaNombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="artistaNombre" name="nombre" placeholder="Ej: Camilo Mori" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="artistaEmail" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="artistaEmail" name="email" placeholder="artista@dominio.cl" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="artistaTelefono" class="form-label">Teléfono</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+56</span>
+                                        <input type="tel" class="form-control" id="artistaTelefono" name="telefono" placeholder="912345678" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="artistaNacimiento" class="form-label">Año de Nacimiento</label>
+                                    <input type="number" class="form-control" id="artistaNacimiento" name="anio_nacimiento" min="1920" max="2008" placeholder="1995" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="artistaPassword" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="artistaPassword" name="password" minlength="8" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="artistaPasswordConfirm" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="artistaPasswordConfirm" name="password_confirmation" minlength="8" required>
+                                </div>
+                            </div>
+
+                            <!-- Sección 2: Verificación Legal -->
+                            <h2 class="h6 fw-bold text-uppercase text-primary mb-3 border-bottom pb-2">
+                                <i class="fa-solid fa-shield-halved me-2"></i>2. Verificación de Identidad y Autoría
+                            </h2>
+                            <div class="row g-3 mb-4">
+                                <div class="col-12">
+                                    <label for="artistaRut" class="form-label">RUT del Artista</label>
+                                    <input type="text" class="form-control" id="artistaRut" name="rut" placeholder="12.345.678-K" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="carnetFrente" class="form-label">Carnet de Identidad (Frente)</label>
+                                    <input type="file" class="form-control" id="carnetFrente" name="carnet_frente" accept="image/jpeg,image/png" required>
+                                    <div class="form-text">Solo archivos .jpg o .png</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="carnetReverso" class="form-label">Carnet de Identidad (Reverso)</label>
+                                    <input type="file" class="form-control" id="carnetReverso" name="carnet_reverso" accept="image/jpeg,image/png" required>
+                                    <div class="form-text">Solo archivos .jpg o .png</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="declaracionAutor" required>
+                                        <label class="form-check-label text-muted small" for="declaracionAutor">
+                                            Declaro bajo juramento que las obras a comercializar son de mi autoría y cumplo con los términos de licenciamiento de la plataforma.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección 3: Datos Bancarios -->
+                            <h2 class="h6 fw-bold text-uppercase text-primary mb-3 border-bottom pb-2">
+                                <i class="fa-solid fa-piggy-bank me-2"></i>3. Datos Bancarios (Para Pago de Ventas)
+                            </h2>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="bancoSelect" class="form-label">Banco</label>
+                                    <select class="form-select" id="bancoSelect" name="banco_id" required>
+                                        <option value="" selected disabled>Selecciona un banco</option>
+                                        <option value="banco_estado">BancoEstado / CuentaRUT</option>
+                                        <option value="banco_chile">Banco de Chile / Edwards</option>
+                                        <option value="santander">Banco Santander</option>
+                                        <option value="bci">BCI</option>
+                                        <option value="scotiabank">Scotiabank</option>
+                                        <option value="itau">Itaú</option>
+                                        <option value="falabella">Banco Falabella</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="tipoCuentaSelect" class="form-label">Tipo de Cuenta</label>
+                                    <select class="form-select" id="tipoCuentaSelect" name="tipo_cuenta" required>
+                                        <option value="" selected disabled>Selecciona el tipo</option>
+                                        <option value="corriente">Cuenta Corriente</option>
+                                        <option value="vista">Cuenta Vista / CuentaRUT</option>
+                                        <option value="ahorro">Cuenta de Ahorro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="numeroCuenta" class="form-label">Número de Cuenta</label>
+                                    <input type="text" class="form-control" id="numeroCuenta" name="numero_cuenta" placeholder="123456789" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="rutTitular" class="form-label">RUT del Titular</label>
+                                    <input type="text" class="form-control" id="rutTitular" name="rut_titular" placeholder="Debe coincidir con el RUT del artista" required>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary rounded-pill w-100 py-2 fw-semibold">
+                                        <i class="fa-solid fa-paper-plane me-2"></i>Enviar Solicitud de Artista
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-4">
+                            <span class="text-muted small">¿Ya tienes una cuenta?</span>
+                            <a href="login.html" class="text-primary text-decoration-none small fw-bold ms-1">Inicia sesión</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-3 text-center text-muted small">
+        <div class="container">
+            &copy; 2026 Catálogo Chileno. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
