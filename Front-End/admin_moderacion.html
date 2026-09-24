@@ -46,7 +46,76 @@
         </nav>
 
         <main class="container-fluid px-4 py-4">
-            <!-- AQUÍ IRA EL CONTENIDO (Bloques 3 y 4) -->
+            <!-- Obras en Cola de Espera (HU-96) -->
+            <section class="mb-5">
+                <h6 class="fw-bold mb-3"><i class="fa-solid fa-images me-2 text-primary"></i>Aprobación de Obras Pendientes</h6>
+                <div class="card border-0 shadow-sm">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0 bg-white">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Vista Previa</th>
+                                    <th>Título y Autor</th>
+                                    <th>Región</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/01.jpg" alt="Obra" class="rounded" style="width: 60px; height: 60px; object-fit: cover;"></td>
+                                    <td>
+                                        <strong class="d-block text-dark">Caballos</strong>
+                                        <small class="text-muted">Juan Pablo Urrutia</small>
+                                    </td>
+                                    <td>Maule</td>
+                                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success me-1" title="Aprobar"><i class="fa-solid fa-check"></i></button>
+                                        <button class="btn btn-sm btn-danger me-1" title="Rechazar"><i class="fa-solid fa-xmark"></i></button>
+                                        <button class="btn btn-sm btn-outline-primary" title="Destacar"><i class="fa-solid fa-star"></i> Destacar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Denuncias de Derechos de Autor (HU-94) -->
+            <section class="mb-5">
+                <h6 class="fw-bold mb-3"><i class="fa-solid fa-triangle-exclamation me-2 text-danger"></i>Obras Denunciadas</h6>
+                <div class="card border-0 shadow-sm border-start border-danger border-4">
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0 bg-white">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Obra Reportada</th>
+                                    <th>Motivo del Reporte</th>
+                                    <th>Denunciante</th>
+                                    <th>Fecha</th>
+                                    <th>Acción Preventiva</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong class="d-block text-dark">Atardecer en la Culebra</strong>
+                                        <a href="#" class="small text-primary">Ver publicación</a>
+                                    </td>
+                                    <td>Violación de Derechos de Autor</td>
+                                    <td>Agencia XYZ</td>
+                                    <td>23 Sep 2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-danger me-1">Suspender Obra</button>
+                                        <button class="btn btn-sm btn-light">Desestimar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
             
         </main>
     </div>
