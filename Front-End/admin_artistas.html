@@ -47,7 +47,82 @@
 
         <main class="container-fluid px-4 py-4">
             
-            <!-- AQUÍ IRÁN LAS TABLAS (Bloque 2) -->
+            <!-- Cola de Verificación de Identidad (HU-69) -->
+            <section class="mb-5">
+                <h6 class="fw-bold mb-3"><i class="fa-solid fa-address-card me-2 text-primary"></i>Verificación de Artistas</h6>
+                <div class="card border-0 shadow-sm p-4 bg-white">
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>RUT</th>
+                                    <th>Documento Adjunto</th>
+                                    <th>Resolución</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Daniela Mardones</td>
+                                    <td>18.123.456-7</td>
+                                    <td>
+                                        <!-- Este enlace abre el modal de abajo -->
+                                        <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalDocumento">
+                                            <i class="fa-solid fa-file-image me-1"></i>Carnet_Ambos_Lados.jpg
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success fw-semibold shadow-sm">Validar Perfil</button>
+                                        <button class="btn btn-sm btn-outline-danger shadow-sm ms-1">Solicitar Reenvío</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directorio de Artistas Activos -->
+            <section class="mb-5">
+                <h6 class="fw-bold mb-3"><i class="fa-solid fa-users me-2 text-info"></i>Directorio de Artistas Registrados</h6>
+                <div class="card border-0 shadow-sm bg-white">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Artista</th>
+                                    <th>Email / Contacto</th>
+                                    <th>Obras Activas</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <strong class="d-block text-dark">Juan Pablo Urrutia</strong>
+                                                <small class="text-muted">Parral, Maule</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>juan.urrutia@email.com</td>
+                                    <td><strong>12</strong> publicadas</td>
+                                    <td><span class="badge bg-success bg-opacity-10 text-success">Verificado</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary" title="Ver portafolio"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger" title="Suspender cuenta"><i class="fa-solid fa-ban"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
         </main>
     </div>
