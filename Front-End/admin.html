@@ -12,30 +12,47 @@
 </head>
 <body class="bg-light">
 
-<!-- NavBar Admin -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
-    <div class="container-fluid px-4">
-        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-            <i class="fa-solid fa-shapes text-primary me-2"></i>Admin | CatálogoChileno
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarAdmin">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#kpis">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="#moderacion">Moderación de Obras</a></li>
-                <li class="nav-item"><a class="nav-link" href="#artistas">Verificación Artistas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#configuracion">Ajustes</a></li>
-            </ul>
-            <div class="d-flex gap-2">
-    <a href="admin_login.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
-</div>
+<!-- Contenedor Flex Principal (Divide pantalla en 2 columnas) -->
+<div class="d-flex min-vh-100">
+    
+    <!-- 1. BARRA LATERAL (Sidebar) -->
+    <aside class="bg-white border-end d-none d-lg-flex flex-column shadow-sm" style="width: 250px;">
+        <div class="p-4 d-flex align-items-center border-bottom">
+            <img src="images/LogoCatalogoChileno.svg" alt="Logotipo" height="24" class="d-inline-block">
         </div>
-    </div>
-</nav>
+        <div class="p-3 flex-grow-1">
+            <p class="text-muted small fw-bold text-uppercase mb-3 px-2">Dashboard</p>
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a class="nav-link active rounded bg-primary bg-opacity-10 text-primary fw-semibold" href="#kpis">
+                        <i class="fa-solid fa-gauge me-2"></i> Panel de Ventas
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#moderacion"><i class="fa-solid fa-images me-2"></i> Moderación</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#artistas"><i class="fa-solid fa-users me-2"></i> Artistas</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#configuracion"><i class="fa-solid fa-gear me-2"></i> Ajustes</a></li>
+            </ul>
+        </div>
+    </aside>
 
-<main class="container-fluid px-4 py-4">
+    <!-- 2. ÁREA DE CONTENIDO PRINCIPAL -->
+    <div class="flex-grow-1 bg-light">
+        
+        <!-- Barra de Navegación Superior (Top Bar) -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 px-4 shadow-sm">
+            <div class="d-flex align-items-center w-100">
+                <div class="input-group" style="max-width: 300px;">
+                    <span class="input-group-text bg-light border-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                    <input type="text" class="form-control bg-light border-0 shadow-none" placeholder="Buscar...">
+                </div>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <a href="admin_login.html" class="btn btn-outline-danger btn-sm rounded-pill px-3">Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenedor interno -->
+        <main class="container-fluid px-4 py-4">
     
     <!-- Sección 1: Dashboard y KPIs (HU-87) -->
     <section id="kpis" class="mb-5">
